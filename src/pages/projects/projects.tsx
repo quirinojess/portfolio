@@ -3,7 +3,7 @@ import Navigation from "../../components/nav/navigation";
 import Card from "../../components/card/card";
 import { Align, Alignleft, Alignright, H2 } from "./styled";
 
-const Projects = () => {
+export const Projects = () => {
  return (
   <>
    <Align>
@@ -18,4 +18,3 @@ const Projects = () => {
   </>
  );
 };
-export { Projects };

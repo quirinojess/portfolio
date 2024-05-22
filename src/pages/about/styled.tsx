@@ -36,3 +36,7 @@ export const Text = styled.div`
  font-size: 16px;
  line-height: 32px;
 `;
+<<<<<<< HEAD
+=======
+
+>>>>>>> af82470 (refactor: migrate project to typescript)
