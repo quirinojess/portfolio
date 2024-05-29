@@ -1,3 +1,4 @@
+import React from "react";
 import { Main, Cards, Title, Description, Tecnology, See } from "./styled";
 
 function Card() {
@@ -9,7 +10,10 @@ function Card() {
      <Description>Portal for scheduling space travel</Description>
      <Tecnology>React.js</Tecnology>
      <See>
-      <a target="_blank" href="https://quirinojess.github.io/labex/" rel="noreferrer">
+      <a
+       target="_blank"
+       href="https://quirinojess.github.io/labex/"
+       rel="noreferrer">
        ► see the project
       </a>
      </See>
