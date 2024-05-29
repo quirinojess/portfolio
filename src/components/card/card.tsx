@@ -1,3 +1,4 @@
+import React from "react";
 import { Main, Cards, Title, Description, Tecnology, See } from "./styled";
 
 function Card() {

@@ -1,3 +1,4 @@
+import React from "react";
 import { Main, H1, H2 } from "./styled";
 function Logo() {
  return (
