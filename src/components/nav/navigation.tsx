@@ -1,5 +1,5 @@
 import React from "react";
-import { Main, Photo, Name, Navbar, NavItem } from "./styled";
+import { Main, Navbar, NavItem } from "./styled";
 import { useNavigate } from "react-router-dom";
 
 function Navigation() {
@@ -16,10 +16,6 @@ function Navigation() {
 
  return (
   <Main>
-   <Photo></Photo>
-
-   <Name>Jess</Name>
-
    <Navbar>
     <NavItem
      role="button"
