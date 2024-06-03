@@ -1,73 +1,32 @@
-import styled from 'styled-components';
-import { keyframes} from "styled-components"
+import styled, { css, keyframes } from "styled-components";
 
-
-const bounce = keyframes`
-0% {
-  opacity:0;
-  transform:  translate(-1500px,0px)  ;
-}
-60% {
-  opacity:1;
-  transform:  translate(30px,0px)  ;
-}
-80% {
-  transform:  translate(-10px,0px)  ;
-}
-100% {
-  opacity:1;
-  transform:  translate(0px,0px)  ;
-}
-`;
-
-
-
-export const Main = styled.div`
-width:100%;
-padding-top:10vh;
-height:auto;
-   display:flex;
-   flex-direction: column;
-   align-items: flex-start;
-  flex-wrap:wrap;
-  animation: ${bounce} ease 1.5s;
-  animation-iteration-count: 1;
-  transform-origin: 50% 50%;
-  animation-fill-mode:forwards;
-
-  @media (max-width: 768px) {
-    padding-top:5vh;
+const reveal = keyframes`
+  from {
+    stroke-dashoffset: 2000;
+  }
+  to {
+    stroke-dashoffset: 0;
   }
 `;
 
-
-
-export const H1 = styled.h1`
-
-color:white;
-font-size:8em;
-font-weight:700;
-text-shadow: 4px 2px 5px rgba(0, 0, 0, 0.86);
-margin:0;
-padding:0;
-@media (max-width: 768px) {
-  font-size:6em;
-}
-
+const pathAnimation = (strokeWidth: string | undefined) => css`
+ stroke-width: ${strokeWidth ? (parseInt(strokeWidth) * 5).toString() : ""};
+ stroke-dasharray: 2000;
+ stroke-dashoffset: 2000;
+ animation: ${reveal} ${props => props.theme.transitions.long} forwards;
 `;
 
-export const H2 = styled.h2`
+export const Svg = styled.svg`
+ width: ${props => props.theme.proportions.full};
+ max-width: ${props => props.theme.sizes.small};
+ margin: ${props => props.theme.spacing.medium} auto;
+`;
 
- color:#fd2c67;
- font-size:4.0em;
- font-weight:400;
-   letter-spacing:2px;
-   margin-top:-10px;
-padding:0;
+export const Path = styled.path<{ stroke?: string; strokeWidth?: string }>`
+ ${props => pathAnimation(props.strokeWidth)};
+ stroke: ${props => props.stroke};
+`;
 
-@media (max-width: 768px) {
-  font-size:2.0em;
-}
-
-   
+export const MaskPath = styled.path<{ strokeWidth?: string }>`
+ ${props => pathAnimation(props.strokeWidth)};
 `;
