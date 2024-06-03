@@ -1,5 +1,6 @@
 const themeDark = {
  colors: {
+  white: "#f9f9f9",
   darkDeep: "#000000",
   darkMedium: "#333333",
   primary: "#D9E371",
@@ -21,6 +22,14 @@ const themeDark = {
   medium: "16px",
   large: "32px",
  },
+ sizes: {
+  small: "80px",
+  medium: "160px",
+  large: "320px",
+ },
+ proportions: {
+  full: "100%",
+ },
  breakpoints: {
   mobile: "480px",
   tablet: "768px",
@@ -37,9 +46,16 @@ const themeDark = {
   thick: "2px solid",
  },
  transitions: {
-  short: "0.3s",
-  medium: "0.5s",
-  long: "1s",
+  short: "0.8s",
+  medium: "4s",
+  long: "8s",
+ },
+ strokes: {
+  thin: "1",
+  regular: "2",
+  bold: "3",
+  extraBold: "4",
+  black: "5",
  },
 };
 
