@@ -1,9 +1,9 @@
 import { createGlobalStyle, ThemeProps } from "styled-components";
-import { Theme } from "./types";
+import { ITheme } from "./types";
 
-const GlobalStyle = createGlobalStyle<ThemeProps<Theme>>`
+const GlobalStyle = createGlobalStyle<ThemeProps<ITheme>>`
     body {
-        font-family: ${props => props.theme.fonts.primary};
+        font-family: ${props => props.theme.typography.primary};
     }
 `;
 
