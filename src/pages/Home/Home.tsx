@@ -5,8 +5,10 @@ import Navigation from "../../components/nav/navigation";
 import { Align, Alignleft, Alignright } from "./styled";
 
 const Home = () => {
+ const testId = "home";
+
  return (
-  <Align>
+  <Align data-testid={testId}>
    <Alignleft>
     <Navigation />
    </Alignleft>

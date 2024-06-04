@@ -1,3 +1,3 @@
-import { AppRoutes } from "./Routes";
+import { RoutesConfig } from "./RoutesConfig";
 
-export default AppRoutes;
+export default RoutesConfig;

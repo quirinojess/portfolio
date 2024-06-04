@@ -4,8 +4,10 @@ import Card from "../../components/card/card";
 import { Align, Alignleft, Alignright, H2 } from "./styled";
 
 const Projects = () => {
+ const testId = "projects";
+
  return (
-  <Align>
+  <Align data-testid={testId}>
    <Alignleft>
     <Navigation />
    </Alignleft>
