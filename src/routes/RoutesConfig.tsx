@@ -1,8 +1,7 @@
-import React from "react";
 import { Routes as Switch, Route, Navigate } from "react-router-dom";
 import { Home, Projects } from "../pages";
 
-const AppRoutes = () => {
+const RoutesConfig = () => {
  return (
   <Switch>
    <Route path="/" element={<Home />} />
@@ -12,4 +11,4 @@ const AppRoutes = () => {
  );
 };
 
-export { AppRoutes };
+export { RoutesConfig };
