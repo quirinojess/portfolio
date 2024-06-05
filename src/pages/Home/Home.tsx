@@ -6,7 +6,6 @@ const Home = () => {
  const testId = "home";
  const { menu } = HomeContent;
 
- console.log(menu);
  return (
   <S.Main data-testid={testId}>
    <S.Header>
