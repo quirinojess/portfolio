@@ -1,4 +1,3 @@
-import React from "react";
 import * as S from "./styled";
 import { themeDark } from "../../themes";
 
@@ -51,4 +50,4 @@ function Logo() {
  );
 }
 
-export default Logo;
+export { Logo };

@@ -1,5 +1,3 @@
-import React from "react";
-import Navigation from "../../components/nav/navigation";
 import Card from "../../components/card/card";
 import { Align, Alignleft, Alignright, H2 } from "./styled";
 
@@ -8,9 +6,7 @@ const Projects = () => {
 
  return (
   <Align data-testid={testId}>
-   <Alignleft>
-    <Navigation />
-   </Alignleft>
+   <Alignleft></Alignleft>
    <Alignright>
     <H2>Projects</H2>
     <Card />

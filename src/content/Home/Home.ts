@@ -1,6 +1,7 @@
-import { IHomeContent } from "./types";
+import { IHome } from "@/types/Home";
 
-const HomeContent: IHomeContent = {
+
+const HomeContent: IHome = {
  menu: [
   {
     id: 0, 
