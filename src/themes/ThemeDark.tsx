@@ -16,6 +16,8 @@ const themeDark = {
   h6: "0.75em",
   p: "1em",
   small: "0.8em",
+  medium: "1.1em",
+  large: "1.3em",
  },
  spacing: {
   small: "8px",
@@ -29,6 +31,7 @@ const themeDark = {
  },
  proportions: {
   full: "100%",
+  fourFifths: "80%",
  },
  breakpoints: {
   mobile: "480px",

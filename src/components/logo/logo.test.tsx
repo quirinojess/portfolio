@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
 import { themeDark } from "../../themes";
-import Logo from "./logo";
+import { Logo } from "./Logo";
 
 describe("Logo", () => {
  it("renders without crashing", () => {

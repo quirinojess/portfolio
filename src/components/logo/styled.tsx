@@ -17,9 +17,7 @@ const pathAnimation = (strokeWidth: string | undefined) => css`
 `;
 
 export const Svg = styled.svg`
- width: ${props => props.theme.proportions.full};
  max-width: ${props => props.theme.sizes.small};
- margin: ${props => props.theme.spacing.medium} auto;
 `;
 
 export const Path = styled.path<{ stroke?: string; strokeWidth?: string }>`
