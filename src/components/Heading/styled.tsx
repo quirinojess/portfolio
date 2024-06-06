@@ -15,8 +15,7 @@ const slideInFromRight = keyframes`
 `;
 
 export const Heading = styled.div`
- margin: ${props => props.theme.spacing.extraLarge}
-  ${props => props.theme.spacing.medium};
+ margin: ${props => props.theme.spacing.extraLarge} 0;
  line-height: ${props => props.theme.spacing.small};
  animation: ${slideInFromRight} ease 1.5s;
 `;

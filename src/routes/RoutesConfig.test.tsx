@@ -1,12 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { RoutesConfig } from "./RoutesConfig";
-import { themeDark } from "themes";
+import { ThemeDark } from "themes";
 import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
 
 const renderWithTheme = (component: ReactNode) => {
- return render(<ThemeProvider theme={themeDark}>{component}</ThemeProvider>);
+ return render(<ThemeProvider theme={ThemeDark}>{component}</ThemeProvider>);
 };
 
 describe("RoutesConfig", () => {
@@ -22,7 +22,7 @@ describe("RoutesConfig", () => {
 
  it("should render Home component for default route", () => {
   render(
-   <ThemeProvider theme={themeDark}>
+   <ThemeProvider theme={ThemeDark}>
     <MemoryRouter initialEntries={["/"]}>
      <RoutesConfig />
     </MemoryRouter>
@@ -34,7 +34,7 @@ describe("RoutesConfig", () => {
 
  it("should render Projects component for default route", () => {
   render(
-   <ThemeProvider theme={themeDark}>
+   <ThemeProvider theme={ThemeDark}>
     <MemoryRouter initialEntries={["/projects"]}>
      <RoutesConfig />
     </MemoryRouter>

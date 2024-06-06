@@ -1,10 +1,10 @@
-import { Logo, Menu, Heading, Button } from "components";
+import { Logo, Menu, Heading, Button, Paragraph } from "components";
 import * as S from "./styled";
-import { HomeContent } from "content/Home/Home";
+import { HomeContent } from "content";
 
 const Home = () => {
  const testId = "home";
- const { menu, heading, button } = HomeContent;
+ const { menu, heading, button, description } = HomeContent;
 
  return (
   <S.Main data-testid={testId}>
@@ -13,6 +13,7 @@ const Home = () => {
    </S.Header>
    <Heading content={heading} />
    <Button content={button} />
+   <Paragraph content={description} proportion={"threeFourths"} />
   </S.Main>
  );
 };
