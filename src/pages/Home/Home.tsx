@@ -1,4 +1,4 @@
-import { Logo, Menu, Heading, Button, Paragraph } from "components";
+import { Logo, Menu, Heading, Button, Paragraph, Headings } from "components";
 import * as S from "./styled";
 import { HomeContent } from "content";
 
@@ -14,6 +14,10 @@ const Home = () => {
    <Heading content={heading} />
    <Button content={button} />
    <Paragraph content={description} proportion={"threeFourths"} />
+   <Headings title="Tests" type="h1" />
+   <Headings title="Tests" type="h2" />
+   <Headings title="Tests" type="h3" />
+   <Headings title="Tests" type="h4" />
   </S.Main>
  );
 };
