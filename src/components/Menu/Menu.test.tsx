@@ -1,8 +1,13 @@
 import { render, fireEvent, screen } from "@testing-library/react";
 import { MemoryRouter, useLocation } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
-import { themeDark } from "../../themes";
 import { Menu } from "./Menu";
+import { themeDark } from "@/themes";
+import { ThemeProvider } from "styled-components";
+import { ReactNode } from "react";
+
+const renderWithTheme = (component: ReactNode) => {
+ return render(<ThemeProvider theme={themeDark}>{component}</ThemeProvider>);
+};
 
 const LocationDisplay = () => {
  const location = useLocation();
@@ -24,13 +29,11 @@ describe("Menu", () => {
    },
   ];
 
-  render(
-   <ThemeProvider theme={themeDark}>
-    <MemoryRouter initialEntries={["/"]}>
-     <Menu content={mockContent} />
-     <LocationDisplay />
-    </MemoryRouter>
-   </ThemeProvider>
+  renderWithTheme(
+   <MemoryRouter initialEntries={["/"]}>
+    <Menu content={mockContent} />
+    <LocationDisplay />
+   </MemoryRouter>
   );
 
   fireEvent.click(screen.getByText("Projects"));
