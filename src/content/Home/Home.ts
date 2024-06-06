@@ -15,6 +15,7 @@ const HomeContent: IHome = {
     },
  ],
  heading: {title: "Front End", subtitle: "Software Engineer", activeH1: true},
+button: {label: "See All Projects", target:'/projects', ariaLabel: "See All Projects", ariaExpanded: false, ariaControls: "projects", type: "button"},
 };
 
 export { HomeContent };

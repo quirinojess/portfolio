@@ -1,10 +1,10 @@
-import { Logo, Menu, Heading } from "../../components";
+import { Logo, Menu, Heading, Button } from "../../components";
 import * as S from "./styled";
 import { HomeContent } from "../../content/Home/Home";
 
 const Home = () => {
  const testId = "home";
- const { menu, heading } = HomeContent;
+ const { menu, heading, button } = HomeContent;
 
  return (
   <S.Main data-testid={testId}>
@@ -12,6 +12,7 @@ const Home = () => {
     <Logo /> <Menu content={menu} />
    </S.Header>
    <Heading content={heading} />
+   <Button content={button} />
   </S.Main>
  );
 };
