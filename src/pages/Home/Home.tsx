@@ -1,6 +1,6 @@
-import { Logo, Menu, Heading, Button } from "../../components";
+import { Logo, Menu, Heading, Button } from "components";
 import * as S from "./styled";
-import { HomeContent } from "../../content/Home/Home";
+import { HomeContent } from "content/Home/Home";
 
 const Home = () => {
  const testId = "home";

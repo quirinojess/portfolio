@@ -1,4 +1,4 @@
-import { IHeading } from "@/types/Heading";
+import { IHeading } from "types/Heading";
 import * as S from "./styled";
 
 function Heading({ content }: { content: IHeading }) {

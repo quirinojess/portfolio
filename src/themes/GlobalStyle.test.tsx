@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { GlobalStyle } from "./GlobalStyle";
-import { themeDark } from "@/themes";
+import { themeDark } from "themes";
 import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
 

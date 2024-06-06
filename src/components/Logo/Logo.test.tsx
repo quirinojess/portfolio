@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { Logo } from "./Logo";
-import { themeDark } from "@/themes";
+import { themeDark } from "themes";
 import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
 

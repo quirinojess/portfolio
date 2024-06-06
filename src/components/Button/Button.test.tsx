@@ -1,9 +1,9 @@
 import { render, fireEvent, screen } from "@testing-library/react";
 import { Button } from "./Button";
-import { themeDark } from "@/themes";
+import { themeDark } from "themes";
 import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
-import { IButtonContent } from "@/types/Button";
+import { IButtonContent } from "types/Button";
 
 const renderWithTheme = (component: ReactNode) => {
  return render(<ThemeProvider theme={themeDark}>{component}</ThemeProvider>);

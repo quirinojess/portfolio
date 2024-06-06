@@ -1,4 +1,4 @@
-import { IButton } from "@/types/Button";
+import { IButton } from "types/Button";
 import * as S from "./styled";
 import { useHandleClick } from "../../hooks";
 
