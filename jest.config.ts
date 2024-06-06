@@ -11,8 +11,14 @@ const config: Config.InitialOptions = {
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '^@/(.*)$': '<rootDir>/src/$1',
+    '^themes$': '<rootDir>/src/themes',
+    '^pages$': '<rootDir>/src/pages',
+    '^hooks$': '<rootDir>/src/hooks',
+    '^types$': '<rootDir>/src/types',
+    '^components$': '<rootDir>/src/components',
+    '^content$': '<rootDir>/src/content',
   },
-  setupFilesAfterEnv: ['<rootDir>src//tests/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/tests/setupTests.ts'], // Fixed the path
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
   coverageThreshold: {
     global: {
@@ -22,8 +28,8 @@ const config: Config.InitialOptions = {
       lines: 80,
     },
   },
-  coverageDirectory: 'coverage', 
-  coverageReporters: ['text'], 
+  coverageDirectory: 'coverage',
+  coverageReporters: ['text'],
 };
 
 export default config;

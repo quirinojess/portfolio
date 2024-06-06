@@ -1,12 +1,12 @@
 import { render, fireEvent, screen } from "@testing-library/react";
 import { Button } from "./Button";
-import { themeDark } from "themes";
+import { ThemeDark } from "themes";
 import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
 import { IButtonContent } from "types/Button";
 
 const renderWithTheme = (component: ReactNode) => {
- return render(<ThemeProvider theme={themeDark}>{component}</ThemeProvider>);
+ return render(<ThemeProvider theme={ThemeDark}>{component}</ThemeProvider>);
 };
 
 const mockContent: IButtonContent = {
@@ -20,7 +20,7 @@ const mockContent: IButtonContent = {
 
 const handleClick = jest.fn();
 
-jest.mock("../../hooks", () => ({
+jest.mock("hooks", () => ({
  useHandleClick: () => jest.fn(),
 }));
 
@@ -44,7 +44,9 @@ describe("Button", () => {
     onKeyDown={handleClick}
    />
   );
+
   fireEvent.click(screen.getByRole("button"));
+
   expect(handleClick).toHaveBeenCalled();
  });
 });

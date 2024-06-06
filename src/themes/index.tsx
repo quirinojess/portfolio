@@ -1,2 +1,2 @@
-export { themeDark } from "./ThemeDark";
-export { GlobalStyle } from "./GlobalStyle";
+export { ThemeDark } from "./ThemeDark/ThemeDark";
+export { GlobalStyle } from "./GlobalStyle/GlobalStyle";

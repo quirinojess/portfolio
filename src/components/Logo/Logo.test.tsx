@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import { Logo } from "./Logo";
-import { themeDark } from "themes";
+import { ThemeDark } from "themes";
 import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
 
 const renderWithTheme = (component: ReactNode) => {
- return render(<ThemeProvider theme={themeDark}>{component}</ThemeProvider>);
+ return render(<ThemeProvider theme={ThemeDark}>{component}</ThemeProvider>);
 };
 
 describe("Logo", () => {

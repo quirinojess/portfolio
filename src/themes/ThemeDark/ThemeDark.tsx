@@ -1,4 +1,4 @@
-const themeDark = {
+const ThemeDark = {
  colors: {
   white: "#f9f9f9",
   darkDeep: "#000000",
@@ -34,7 +34,9 @@ const themeDark = {
  },
  proportions: {
   full: "100%",
-  fourFifths: "80%",
+  threeFourths: "75%",
+  half: "50%",
+  oneFourth: "25%",
  },
  breakpoints: {
   mobile: "480px",
@@ -65,4 +67,4 @@ const themeDark = {
  },
 };
 
-export { themeDark };
+export { ThemeDark };
