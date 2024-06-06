@@ -14,6 +14,7 @@ const HomeContent: IHome = {
      label: "Projects",
     },
  ],
+ heading: {title: "Front End", subtitle: "Software Engineer", activeH1: true},
 };
 
 export { HomeContent };
