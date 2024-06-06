@@ -1,13 +1,9 @@
 import { IMenu } from "@/types/Menu";
 import * as S from "./styled";
-import { useNavigate } from "react-router-dom";
+import { useHandleClick } from "../../hooks";
 
 function Menu(content: { content: IMenu }) {
- const navigate = useNavigate();
-
- function handleClick(route: string) {
-  return navigate(route);
- }
+ const { handleClick } = useHandleClick();
 
  const navbarMap = content.content.map(item => (
   <S.NavItem
