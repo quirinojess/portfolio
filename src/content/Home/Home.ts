@@ -1,4 +1,4 @@
-import { IHome } from "@/types/Home";
+import { IHome } from "types/Home";
 
 
 const HomeContent: IHome = {

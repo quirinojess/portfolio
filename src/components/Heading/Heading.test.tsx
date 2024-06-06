@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { Heading } from "./Heading";
-import { IHeading } from "@/types/Heading";
-import { themeDark } from "@/themes";
+import { IHeading } from "types/Heading";
+import { themeDark } from "themes";
 import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
 

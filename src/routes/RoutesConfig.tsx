@@ -1,5 +1,5 @@
 import { Routes as Switch, Route, Navigate } from "react-router-dom";
-import { Home, Projects } from "../pages";
+import { Home, Projects } from "pages";
 
 const RoutesConfig = () => {
  return (

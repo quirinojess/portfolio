@@ -1,4 +1,4 @@
-import { IMenu } from "@/types/Menu";
+import { IMenu } from "types/Menu";
 import * as S from "./styled";
 import { useHandleClick } from "../../hooks";
 

@@ -1,7 +1,7 @@
 import { render, fireEvent, screen } from "@testing-library/react";
 import { MemoryRouter, useLocation } from "react-router-dom";
 import { Menu } from "./Menu";
-import { themeDark } from "@/themes";
+import { themeDark } from "themes";
 import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
 
