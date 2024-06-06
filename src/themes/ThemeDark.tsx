@@ -18,11 +18,14 @@ const themeDark = {
   small: "0.8em",
   medium: "1.1em",
   large: "1.3em",
+  veryLarge: "5em",
+  extraLarge: "6em",
  },
  spacing: {
   small: "8px",
   medium: "16px",
   large: "32px",
+  extraLarge: "48px",
  },
  sizes: {
   small: "80px",

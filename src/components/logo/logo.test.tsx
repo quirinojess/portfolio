@@ -1,15 +1,16 @@
 import { render, screen } from "@testing-library/react";
-import { ThemeProvider } from "styled-components";
-import { themeDark } from "../../themes";
 import { Logo } from "./Logo";
+import { themeDark } from "@/themes";
+import { ThemeProvider } from "styled-components";
+import { ReactNode } from "react";
+
+const renderWithTheme = (component: ReactNode) => {
+ return render(<ThemeProvider theme={themeDark}>{component}</ThemeProvider>);
+};
 
 describe("Logo", () => {
  it("renders without crashing", () => {
-  render(
-   <ThemeProvider theme={themeDark}>
-    <Logo />
-   </ThemeProvider>
-  );
+  renderWithTheme(<Logo />);
   expect(screen.getByTestId("logotype")).toBeInTheDocument();
  });
 });
