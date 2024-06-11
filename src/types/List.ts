@@ -12,3 +12,11 @@ description:string;
 link: string;
 linkDescription: string;
 }> {}
+
+export interface IListItem{
+    id: string;
+    title: string;
+    description:string;
+    link: string;
+    linkDescription: string;
+    }
