@@ -1,24 +1,33 @@
 import { useState } from "react";
-import { IList } from "types/List";
+import { IList, IListItem } from "types/List";
 import * as S from "./styled";
+import Modal from "components/Modal";
+import { IModalContent } from "types/Modal";
 
 function List({ content, isLink, isModal }: IList) {
- const [isModalOpen, setIsModalOpen] = useState(false);
- const [modalContent, setModalContent] = useState("");
+ const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
+ const [modalContent, setModalContent] = useState<IModalContent>({});
 
- const handleLinkClick = (link: string) => {
-  setModalContent(link);
-  setIsModalOpen(true);
+ const handleLinkClick = (item: IListItem) => {
+  setModalContent({
+   imgLink: item.link,
+   imgAlt: item.description,
+  });
+  setIsOpenModal(true);
  };
 
- const modalComponent = isModalOpen && (
-  <S.Modal onClick={() => setIsModalOpen(false)}>
-   <iframe
-    src={modalContent}
-    title="Modal Content"
-    style={{ width: "70%", height: "70%" }}
-   />
-  </S.Modal>
+ const modalComponent = isOpenModal && (
+  <Modal setIsOpenModal={setIsOpenModal}>
+   {modalContent && modalContent.imgLink && (
+    <img src={modalContent.imgLink} alt={modalContent.imgAlt} />
+   )}
+   {modalContent && modalContent.text && (
+    <>
+     <h2>{modalContent.text}</h2>
+     <p>{modalContent.description}</p>
+    </>
+   )}
+  </Modal>
  );
 
  const listMap = content.map(item => {
@@ -32,7 +41,7 @@ function List({ content, isLink, isModal }: IList) {
      <S.ListItemLink href={item.link}> {item.linkDescription}</S.ListItemLink>
     )}
     {isModal && (
-     <S.ListItemLink onClick={() => handleLinkClick(item.link)}>
+     <S.ListItemLink onClick={() => handleLinkClick(item)}>
       {item.linkDescription}
      </S.ListItemLink>
     )}
