@@ -1,5 +1,6 @@
 const ThemeDark = {
  colors: {
+  transparency: "rgba(51, 51, 51, 0.7)",
   white: "#f9f9f9",
   darkDeep: "#000000",
   darkMedium: "#333333",
@@ -51,6 +52,11 @@ const ThemeDark = {
  borders: {
   thin: "1px solid",
   thick: "2px solid",
+ },
+ borderRadius: {
+  small: "10px",
+  medium: "20px",
+  large: "30px",
  },
  transitions: {
   short: "0.8s",
