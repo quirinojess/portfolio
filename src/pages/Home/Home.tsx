@@ -1,12 +1,20 @@
-import { Logo, Menu, Heading, Button, Paragraph, Headings } from "components";
+import {
+ Logo,
+ Menu,
+ Heading,
+ Button,
+ Paragraph,
+ Headings,
+ Figure,
+ List,
+} from "components";
 import * as S from "./styled";
 import { HomeContent } from "content";
-import Figure from "components/Figure";
 import jess from "assets/images/about-me.png";
 
 const Home = () => {
  const testId = "home";
- const { menu, heading, button, description } = HomeContent;
+ const { menu, heading, button, description, certifieds } = HomeContent;
 
  return (
   <S.Main data-testid={testId}>
@@ -27,6 +35,7 @@ const Home = () => {
     width="300"
     height="auto"
    />
+   <List content={certifieds} isModal />
   </S.Main>
  );
 };
