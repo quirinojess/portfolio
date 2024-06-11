@@ -5,4 +5,5 @@ export { default as Headings } from "./Headings";
 export { default as List } from "./List";
 export { default as Logo } from "./Logo";
 export { default as Menu } from "./Menu";
+export { default as Modal } from "./Modal";
 export { default as Paragraph } from "./Paragraph";
