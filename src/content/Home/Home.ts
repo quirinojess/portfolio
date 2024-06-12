@@ -24,6 +24,9 @@ certifieds: [
   {id: '3', title: 'React', description: 'React Certified Developer', link: 'https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/65584/feecaa53d0ed09f9795dd83d13109f5e/certificado.png', linkDescription: 'View Certificate'},
   {id: '4', title: 'React', description: 'React Certified Developer', link: 'https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/65584/feecaa53d0ed09f9795dd83d13109f5e/certificado.png', linkDescription: 'View Certificate'},
   {id: '5', title: 'React', description: 'React Certified Developer', link: 'https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/65584/feecaa53d0ed09f9795dd83d13109f5e/certificado.png', linkDescription: 'View Certificate'},
-]};
+],
+skills: [{id:'1', text: 'React', isHighlighted: true}, {id:'2', text: 'Redux'}, {id:'3', text: 'TypeScript'}, {id:'4', text: 'JavaScript'}, {id:'5', text: 'HTML', isHighlighted: true}, {id:'6', text: 'CSS', isHighlighted: true}, {id:'7', text: 'SASS'}, {id:'8', text: 'Styled Components', isHighlighted: true}, {id:'9', text: 'Material UI'}, {id:'10', text: 'Bootstrap'}, {id:'11', text: 'Jest'}, {id:'12', text: 'React Testing Library'}, {id:'13', text: 'Cypress'}
+],
+};
 
 export { HomeContent };
