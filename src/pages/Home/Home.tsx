@@ -7,6 +7,7 @@ import {
  Headings,
  Figure,
  List,
+ Marquee,
 } from "components";
 import * as S from "./styled";
 import { HomeContent } from "content";
@@ -14,7 +15,7 @@ import jess from "assets/images/about-me.png";
 
 const Home = () => {
  const testId = "home";
- const { menu, heading, button, description, certifieds } = HomeContent;
+ const { menu, heading, button, description, certifieds, skills } = HomeContent;
 
  return (
   <S.Main data-testid={testId}>
@@ -36,6 +37,7 @@ const Home = () => {
     height="auto"
    />
    <List content={certifieds} isModal />
+   <Marquee content={skills} />
   </S.Main>
  );
 };

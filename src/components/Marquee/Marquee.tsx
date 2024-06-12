@@ -1,0 +1,20 @@
+import { IMarquee } from "types/Marquee";
+import * as S from "./styled";
+
+function Marquee({ content }: IMarquee) {
+ const itemsMap = content.map(item => (
+  <S.MarqueeText key={item.id} isHighlighted={item.isHighlighted}>
+   {item.text}
+  </S.MarqueeText>
+ ));
+
+ return (
+  <S.Marquee>
+   {[...Array(10)].map((_: string, index: number) => (
+    <S.MarqueeRotate key={index}> {itemsMap} </S.MarqueeRotate>
+   ))}
+  </S.Marquee>
+ );
+}
+
+export { Marquee };
