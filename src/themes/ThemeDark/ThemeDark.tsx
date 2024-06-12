@@ -22,12 +22,18 @@ const ThemeDark = {
   extraLarge: "6em",
  },
  spacing: {
+  extraSmall: "6px",
+  verySmall: "6px",
   small: "8px",
   medium: "16px",
   large: "32px",
+  veryLarge: "40px",
   extraLarge: "48px",
+  center: "0 auto",
  },
  sizes: {
+  extraSmall: "8px",
+  verySmall: "16px",
   small: "80px",
   medium: "160px",
   large: "320px",

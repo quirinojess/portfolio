@@ -11,8 +11,8 @@ export const ListItem = styled.li`
  list-style: none;
  border-bottom: ${props => props.theme.borders.thin};
  border-color: ${props => props.theme.colors.primary};
-
  margin-bottom: ${props => props.theme.spacing.medium};
+ margin-left: -${props => props.theme.spacing.veryLarge};
  transition: ${props => props.theme.transitions.medium} ease;
  &:hover {
   border-color: ${props => props.theme.colors.secondary};
