@@ -8,6 +8,7 @@ import {
  Figure,
  List,
  Marquee,
+ Timeline,
 } from "components";
 import * as S from "./styled";
 import { HomeContent } from "content";
@@ -15,7 +16,8 @@ import jess from "assets/images/about-me.png";
 
 const Home = () => {
  const testId = "home";
- const { menu, heading, button, description, certifieds, skills } = HomeContent;
+ const { menu, heading, button, description, certifieds, skills, experience } =
+  HomeContent;
 
  return (
   <S.Main data-testid={testId}>
@@ -38,6 +40,7 @@ const Home = () => {
    />
    <List content={certifieds} isModal />
    <Marquee content={skills} />
+   <Timeline content={experience} />
   </S.Main>
  );
 };
