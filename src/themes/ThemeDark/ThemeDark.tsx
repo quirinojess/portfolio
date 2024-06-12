@@ -62,6 +62,7 @@ const ThemeDark = {
   short: "0.8s",
   medium: "4s",
   long: "8s",
+  extremeLong: "32s",
  },
  strokes: {
   thin: "1",
