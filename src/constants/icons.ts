@@ -1,1 +1,1 @@
-export const ICONSTYPES =['social-codepen' , 'social-git' , 'social-linkedin' , 'close']
+export const ICONSTYPES =['social-codepen' , 'social-github' , 'social-linkedin' , 'close']
