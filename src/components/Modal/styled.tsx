@@ -6,8 +6,7 @@ export const ModalClose = styled.button`
  justify-content: flex-end;
  background: none;
  border: 0;
- color: ${props => props.theme.colors.secondary};
- font-size: ${props => props.theme.typography.large};
+ cursor: pointer;
 `;
 
 export const Modal = styled.div`
@@ -21,6 +20,7 @@ export const Modal = styled.div`
  flex-direction: column;
  justify-content: center;
  align-items: center;
+ z-index: 999;
 `;
 export const ModalContainer = styled.div`
  color: ${props => props.theme.colors.white};

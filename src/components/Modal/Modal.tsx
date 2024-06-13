@@ -1,5 +1,6 @@
 import { IModal } from "types/Modal";
 import * as S from "./styled";
+import { Icons } from "components";
 
 function Modal({ setIsOpenModal, children }: IModal) {
  return (
@@ -7,7 +8,9 @@ function Modal({ setIsOpenModal, children }: IModal) {
    onClick={() => setIsOpenModal(false)}
    role="dialog"
    aria-modal="true">
-   <S.ModalClose onClick={() => setIsOpenModal(false)}>X</S.ModalClose>
+   <S.ModalClose onClick={() => setIsOpenModal(false)}>
+    <Icons type="close" size="30px" fill="secondary" />
+   </S.ModalClose>
    <S.ModalContainer>{children} </S.ModalContainer>
   </S.Modal>
  );
