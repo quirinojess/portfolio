@@ -1,0 +1,1 @@
+export const ICONSTYPES =['social-codepen' , 'social-git' , 'social-linkedin' , 'close']
