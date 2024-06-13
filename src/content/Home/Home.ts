@@ -39,7 +39,11 @@ date:"2021-2022"
   company: "Another Tech Company",
   description: "Contributed to backend services and API development.",
 date:"2022-2023"
-}]
+}],
+social: [{id: '1', name: 'github', url: 'https://github.com'}, 
+  {id: '2', name: 'linkedin', url: 'https://linkedin.com'}, 
+  {id: '3', name: 'codepen', url: 'https://codepen.io'}
+],
 };
 
 export { HomeContent };
