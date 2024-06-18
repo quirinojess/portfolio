@@ -1,13 +1,11 @@
 import styled from "styled-components";
+import { RowBetween } from "themes/CommonAligns/CommonAligns";
 
 export const List = styled.ul`
  line-height: ${props => props.theme.spacing.small};
 `;
 
-export const ListItem = styled.li`
- display: flex;
- justify-content: space-between;
- align-items: center;
+export const ListItem = styled(RowBetween("li"))`
  list-style: none;
  border-bottom: ${props => props.theme.borders.thin};
  border-color: ${props => props.theme.colors.primary};

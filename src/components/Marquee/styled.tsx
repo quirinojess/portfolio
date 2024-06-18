@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { RowBetween } from "themes/CommonAligns/CommonAligns";
 
 export const marqueeAnimation = keyframes`
 from {transform: translateX(0);}
@@ -17,11 +18,9 @@ export const Marquee = styled.div`
  border-color: ${props => props.theme.colors.secondary};
 `;
 
-export const MarqueeRotate = styled.div`
+export const MarqueeRotate = styled(RowBetween("div"))`
  animation: ${marqueeAnimation} ${props => props.theme.transitions.extremeLong}
   linear infinite;
- display: flex;
- justify-content: space-between;
  gap: var(--gap);
 `;
 

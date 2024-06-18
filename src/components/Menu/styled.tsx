@@ -1,15 +1,12 @@
 import styled, { keyframes } from "styled-components";
+import { RowEnd } from "themes/CommonAligns/CommonAligns";
 
 const colorChange = keyframes`
   0% { border-color: var(--border-color-primary); }
   50% { border-color: var(--border-color-secondary); }
 `;
 
-export const Navbar = styled.nav`
- display: flex;
- justify-content: flex-end;
- align-items: center;
-`;
+export const Navbar = styled(RowEnd("nav"))``;
 
 export const NavItem = styled.button`
  --border-color-primary: ${props => props.theme.colors.secondary};
