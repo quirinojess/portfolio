@@ -1,26 +1,21 @@
 import styled from "styled-components";
+import { ColumnCenter, RowEnd } from "themes/CommonAligns/CommonAligns";
 
-export const ModalClose = styled.button`
+export const ModalClose = styled(RowEnd("button"))`
  width: ${props => props.theme.proportions.half};
- display: flex;
- justify-content: flex-end;
  background: none;
- border: 0;
+ border: none;
  cursor: pointer;
 `;
 
-export const Modal = styled.div`
+export const Modal = styled(ColumnCenter("div"))`
  position: fixed;
  top: 0;
  left: 0;
+ z-index: 999;
  width: ${props => props.theme.proportions.full};
  height: ${props => props.theme.proportions.full};
  background: ${props => props.theme.colors.transparency};
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- z-index: 999;
 `;
 export const ModalContainer = styled.div`
  color: ${props => props.theme.colors.white};
@@ -30,7 +25,7 @@ export const ModalContainer = styled.div`
  width: ${props => props.theme.proportions.half};
  height: auto;
  img {
-  max-width: 100%;
+  max-width: ${props => props.theme.proportions.full};
   height: auto;
  }
 `;

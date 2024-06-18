@@ -1,10 +1,7 @@
 import styled from "styled-components";
+import { RowCenter, ColumnCenter } from "themes/CommonAligns/CommonAligns";
 
-export const TimelineContainer = styled.div`
- display: flex;
- flex-direction: row;
- align-items: center;
- justify-content: center;
+export const TimelineContainer = styled(RowCenter("div"))`
  width: ${props => props.theme.proportions.full};
 `;
 
@@ -23,11 +20,7 @@ export const Date = styled.span`
  font-weight: 100;
 `;
 
-export const TimelineItemContainer = styled.div`
- display: flex;
- flex-direction: column;
- justify-content: flex-start;
- align-items: center;
+export const TimelineItemContainer = styled(ColumnCenter("div"))`
  position: relative;
  text-align: center;
  color: ${props => props.theme.colors.white};
