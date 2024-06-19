@@ -22,6 +22,9 @@ const Home = () => {
   certifieds,
   experience,
   headingAbout,
+  headingRead,
+  descriptionRead,
+  buttonRead,
  } = HomeContent;
 
  return (
@@ -40,20 +43,33 @@ const Home = () => {
    </Sections>
 
    <Sections flex="row" align="center" justify="space-between">
-    <Headings title="Certifieds" type="h2" />
-    <List content={certifieds} isModal />
-   </Sections>
-
-   <Sections flex="row" align="center" justify="space-between">
     <Heading content={headingAbout} />
     <Figure
      alt="Serious woman with dark hair and pink blouse"
      src="assets/images/about-me.png"
      title="Jessica Quirino"
-     width="130px"
+     width="180px"
      height="auto"
     />
-    <Paragraph content={description} proportion={"full"} />
+    <Paragraph content={description} proportion={"threeFourths"} />
+   </Sections>
+
+   <Sections flex="row" align="center" justify="space-between">
+    <Headings title="Certifieds" type="h2" />
+    <List content={certifieds} isModal />
+   </Sections>
+
+   <Sections flex="row" align="center" justify="space-between">
+    <Heading content={headingRead} />
+    <Figure
+     alt="Ebook cover with a girl"
+     src="assets/images/ebook-ia.png"
+     title="IA NO FRONT END - Potencialize seu desenvolvimento"
+     width="180px"
+     height="auto"
+    />
+    <Paragraph content={descriptionRead} proportion={"half"} />
+    <Button content={buttonRead} />
    </Sections>
 
    <Footer />

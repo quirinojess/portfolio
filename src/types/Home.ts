@@ -12,4 +12,7 @@ description: IParagraphContent;
 certifieds: IListContent
 experience: ITimelineContent
 headingAbout: IHeadingContent;
+headingRead: IHeadingContent;
+descriptionRead: IParagraphContent;
+buttonRead: IButtonContent;
 }

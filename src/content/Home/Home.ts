@@ -35,6 +35,9 @@ date:"2021-2023"
 date:"2024"
 }],
 headingAbout: {title: "ABOUT", subtitle: "Jessica Quirino"},
+headingRead: {title: "READ", subtitle: "Ebooks and Articles"},
+descriptionRead:{text: "An ebook about how artificial intelligence can help you in your daily life as a front end developer."},
+buttonRead: {label: "Download now", target:'assets/files/ebook-IA.pdf', ariaLabel: "Download now", ariaExpanded: false, ariaControls: "downloads", type: "button", isExternal: true},
 };
 
 export { HomeContent };

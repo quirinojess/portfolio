@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { Heading } from "./Heading";
-import { IHeading } from "types/Heading";
+import { IHeadingContent } from "types/Heading";
 import { ThemeDark } from "themes";
 import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
@@ -11,10 +11,9 @@ const renderWithTheme = (component: ReactNode) => {
 
 describe("Heading", () => {
  test("renders correctly", () => {
-  const mockContent: IHeading = {
+  const mockContent: IHeadingContent = {
    title: "Test Title",
    subtitle: "Test Subtitle",
-   activeH1: true,
   };
 
   renderWithTheme(<Heading content={mockContent} />);
@@ -24,25 +23,23 @@ describe("Heading", () => {
  });
 
  test("renders H1 when activeH1 is true", () => {
-  const mockContent: IHeading = {
+  const mockContent: IHeadingContent = {
    title: "Test Title",
    subtitle: "Test Subtitle",
-   activeH1: true,
   };
 
-  renderWithTheme(<Heading content={mockContent} />);
+  renderWithTheme(<Heading content={mockContent} activeH1={true} />);
   expect(screen.getByRole("heading", { level: 1 })).not.toBeNull();
   expect(screen.queryByRole("heading", { level: 2 })).toBeNull();
  });
 
  test("renders H2 when activeH1 is false", () => {
-  const mockContent: IHeading = {
+  const mockContent: IHeadingContent = {
    title: "Test Title",
    subtitle: "Test Subtitle",
-   activeH1: false,
   };
 
-  renderWithTheme(<Heading content={mockContent} />);
+  renderWithTheme(<Heading content={mockContent} activeH1={false} />);
   expect(screen.getByRole("heading", { level: 2 })).not.toBeNull();
   expect(screen.queryByRole("heading", { level: 1 })).toBeNull();
  });

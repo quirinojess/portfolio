@@ -11,6 +11,7 @@ export const Sections = styled.section<{
  align: ISectionsAlign;
 }>`
  display: flex;
+ flex-wrap: wrap;
  flex-direction: ${({ flex }) => flex};
  justify-content: ${({ justify }) => justify};
  align-items: ${({ align }) => align};
