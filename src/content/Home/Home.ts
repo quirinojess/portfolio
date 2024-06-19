@@ -10,7 +10,7 @@ const HomeContent: IHome = {
   },
  ],
  heading: {title: "Front End", subtitle: "Software Engineer", activeH1: true},
-button: {label: "See All Projects", target:'https://github.com/quirinojess', ariaLabel: "See All Projects", ariaExpanded: false, ariaControls: "projects", type: "button"},
+button: {label: "See All Projects", target:'https://github.com/quirinojess?tab=repositories', ariaLabel: "See All Projects", ariaExpanded: false, ariaControls: "projects", type: "button", isExternal: true},
 description:{text: "I am a SEO front-end engineer who believes in user experience-driven development with a focus on problem-solving. With over 7 years of experience in the field, I design code that prioritizes simplicity while building robust and scalable applications. Welcome to my portfolio, where you will find a glimpse into my journey, certifications, and work."},
 certifieds: [
   {id: '1', title: 'Azure Fundamentals Certified', description: 'AZ-900', link: 'assets/certificates/az-900.png', linkDescription: 'View Certificate'},

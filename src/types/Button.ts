@@ -13,5 +13,6 @@ export interface IButton {
     ariaExpanded: boolean;
     ariaControls: string;
     type: 'button' | 'submit' | 'reset' | undefined;
+    isExternal?: boolean;
 }
    
