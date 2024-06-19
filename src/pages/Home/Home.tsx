@@ -1,6 +1,5 @@
 import {
- Logo,
- Menu,
+ Header,
  Heading,
  Button,
  Paragraph,
@@ -29,25 +28,18 @@ const Home = () => {
 
  return (
   <S.Main data-testid={testId}>
-   <S.Header>
-    <Logo />
-    <Menu content={menu} />
-   </S.Header>
+   <Header content={menu} />
    <Heading content={heading} />
-
    <Paragraph content={description} proportion={"threeFourths"} />
    <Button content={button} />
-
    <S.Section>
     <Headings title="Experience" type="h2" />
     <Timeline content={experience} />
    </S.Section>
-
    <S.Section>
     <Headings title="Certifieds" type="h2" />
     <List content={certifieds} isModal />
    </S.Section>
-
    <S.Section>
     <S.AlignTitles>
      <Headings title="ABOUT" type="h2" />
@@ -62,7 +54,6 @@ const Home = () => {
     />
     <Paragraph content={description} proportion={"full"} />
    </S.Section>
-
    <Social content={social} />
    <Marquee content={skills} />
   </S.Main>

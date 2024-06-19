@@ -6,10 +6,6 @@ export const Main = styled.div`
  margin: 0 auto;
 `;
 
-export const Header = styled(RowBetween("div"))`
- width: ${props => props.theme.proportions.full};
-`;
-
 export const Section = styled(RowBetween("div"))`
  width: ${props => props.theme.proportions.full};
  gap: 0 ${props => props.theme.sizes.verySmall};

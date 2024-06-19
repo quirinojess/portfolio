@@ -1,5 +1,6 @@
 export { default as Button } from "./Button";
 export { default as Figure } from "./Figure";
+export { default as Header } from "./Header";
 export { default as Heading } from "./Heading";
 export { default as Headings } from "./Headings";
 export { default as Icons } from "./Icons";
