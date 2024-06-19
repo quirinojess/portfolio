@@ -5,8 +5,8 @@ import Paragraph from "components/Paragraph";
 
 function Timeline({ content }: ITimeline) {
  const itensMap = content.map(item => (
-  <S.TimelineItemContainer>
-   <S.Date>{item.date}</S.Date>
+  <S.TimelineItemContainer key={item.id}>
+   <S.Period>{item.date}</S.Period>
    <S.Circle />
    <Headings title={item.company} type={"h4"} />
    <Headings title={item.title} type={"h3"} />

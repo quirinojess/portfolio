@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { RowCenter, ColumnCenter } from "themes/CommonAligns/CommonAligns";
+import { RowStart, ColumnCenter } from "themes/CommonAligns/CommonAligns";
 
-export const TimelineContainer = styled(RowCenter("div"))`
+export const TimelineContainer = styled(RowStart("div"))`
  width: ${props => props.theme.proportions.full};
 `;
 
@@ -13,7 +13,7 @@ export const Circle = styled.div`
  border-radius: ${props => props.theme.proportions.half};
 `;
 
-export const Date = styled.span`
+export const Period = styled.span`
  font-size: ${props => props.theme.typography.large};
  color: ${props => props.theme.colors.white};
  margin-bottom: ${props => props.theme.spacing.medium};
@@ -25,11 +25,14 @@ export const TimelineItemContainer = styled(ColumnCenter("div"))`
  text-align: center;
  color: ${props => props.theme.colors.white};
  width: ${props => props.theme.proportions.full};
+ h3 {
+  font-size: ${props => props.theme.typography.large};
+  margin: ${props => props.theme.spacing.extraSmall} 0;
+ }
  h4 {
   font-size: ${props => props.theme.typography.small};
-  margin-bottom: ${props => props.theme.spacing.extraSmall};
+  margin: ${props => props.theme.spacing.small} 0;
  }
-
  p {
   margin-top: -${props => props.theme.spacing.extraSmall};
  }

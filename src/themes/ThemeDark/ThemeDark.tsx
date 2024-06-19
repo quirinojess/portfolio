@@ -11,7 +11,7 @@ const ThemeDark = {
   primary: "'Inter', sans-serif",
   h1: "3em",
   h2: "2em",
-  h3: "1.8em",
+  h3: "1.5em",
   h4: "1.3em",
   p: "1em",
   verySmall: "0.6em",

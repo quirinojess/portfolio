@@ -1,7 +1,7 @@
 
 
 export interface IMenu extends Array<{
-    id: number;
+    id: string;
     path: string;
     label: string;
   }> {}

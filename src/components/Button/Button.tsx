@@ -3,13 +3,21 @@ import * as S from "./styled";
 import { useHandleClick } from "../../hooks";
 
 function Button({ content }: IButton) {
- const { label, target, ariaControls, ariaExpanded, ariaLabel, type } = content;
+ const {
+  label,
+  target,
+  ariaControls,
+  ariaExpanded,
+  ariaLabel,
+  type,
+  isExternal,
+ } = content;
  const { handleClick } = useHandleClick();
 
  return (
   <S.Button
-   onClick={() => handleClick(target)}
-   onKeyDown={() => handleClick(target)}
+   onClick={() => handleClick(target, isExternal)}
+   onKeyDown={() => handleClick(target, isExternal)}
    type={type}
    aria-label={ariaLabel}
    aria-expanded={ariaExpanded}

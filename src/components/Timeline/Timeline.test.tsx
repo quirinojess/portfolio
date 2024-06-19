@@ -11,6 +11,7 @@ const renderWithTheme = (component: ReactNode) => {
 describe("Timeline component", () => {
  const mockContent = [
   {
+   id: "1",
    date: "2022",
    company: "Test Company",
    title: "Test Title",

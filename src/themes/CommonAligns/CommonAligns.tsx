@@ -7,10 +7,22 @@ const ColumnCenter = (element: keyof JSX.IntrinsicElements) => styled[element]`
  flex-direction: column;
 `;
 
+const ColumnStart = (element: keyof JSX.IntrinsicElements) => styled[element]`
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+`;
+
 const RowCenter = (element: keyof JSX.IntrinsicElements) => styled[element]`
  display: flex;
  justify-content: center;
  align-items: center;
+`;
+
+const RowStart = (element: keyof JSX.IntrinsicElements) => styled[element]`
+ display: flex;
+ justify-content: center;
+ align-items: flex-start;
 `;
 
 const RowBetween = (element: keyof JSX.IntrinsicElements) => styled[element]`
@@ -25,4 +37,4 @@ const RowEnd = (element: keyof JSX.IntrinsicElements) => styled[element]`
  align-items: center;
 `;
 
-export { ColumnCenter, RowCenter, RowBetween, RowEnd };
+export { ColumnCenter, ColumnStart, RowCenter, RowStart, RowBetween, RowEnd };
