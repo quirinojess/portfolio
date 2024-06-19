@@ -26,8 +26,8 @@ export const MarqueeRotate = styled(RowBetween("div"))`
 
 export const MarqueeText = styled.div<{ isHighlighted?: boolean }>`
  color: ${props => props.theme.colors.white};
- font-size: ${props => props.theme.typography.large};
- font-weight: ${props => (props.isHighlighted ? "400" : "200")};
+ font-size: ${props => props.theme.typography.medium};
+ font-weight: ${props => (props.isHighlighted ? "600" : "200")};
  white-space: nowrap;
  padding: ${props => props.theme.spacing.medium};
 `;

@@ -31,10 +31,26 @@ const RowBetween = (element: keyof JSX.IntrinsicElements) => styled[element]`
  align-items: center;
 `;
 
+const RowBetweenStart = (element: keyof JSX.IntrinsicElements) => styled[
+ element
+]`
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-start;
+`;
+
 const RowEnd = (element: keyof JSX.IntrinsicElements) => styled[element]`
  display: flex;
  justify-content: flex-end;
  align-items: center;
 `;
 
-export { ColumnCenter, ColumnStart, RowCenter, RowStart, RowBetween, RowEnd };
+export {
+ ColumnCenter,
+ ColumnStart,
+ RowCenter,
+ RowStart,
+ RowBetween,
+ RowBetweenStart,
+ RowEnd,
+};
