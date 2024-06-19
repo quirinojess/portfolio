@@ -22,6 +22,7 @@ const Home = () => {
   certifieds,
   experience,
   headingAbout,
+  descriptionAbout,
   headingRead,
   descriptionRead,
   buttonRead,
@@ -48,10 +49,10 @@ const Home = () => {
      alt="Serious woman with dark hair and pink blouse"
      src="assets/images/about-me.png"
      title="Jessica Quirino"
-     width="180px"
+     width="200px"
      height="auto"
     />
-    <Paragraph content={description} proportion={"threeFourths"} />
+    <Paragraph content={descriptionAbout} proportion={"threeFourths"} />
    </Sections>
 
    <Sections flex="row" align="center" justify="space-between">
