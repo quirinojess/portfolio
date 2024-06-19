@@ -11,5 +11,6 @@ export { default as Marquee } from "./Marquee";
 export { default as Menu } from "./Menu";
 export { default as Modal } from "./Modal";
 export { default as Paragraph } from "./Paragraph";
+export { default as Sections } from "./Sections";
 export { default as Social } from "./Social";
 export { default as Timeline } from "./Timeline";
