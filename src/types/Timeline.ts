@@ -3,6 +3,7 @@ content: ITimelineContent
 }
 
 export interface ITimelineContent extends Array<{
+id: string;
 title: string;
 company: string;
 description: string;

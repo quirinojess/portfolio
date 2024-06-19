@@ -13,7 +13,6 @@ import {
 } from "components";
 import * as S from "./styled";
 import { HomeContent } from "content";
-import jess from "assets/images/about-me.png";
 
 const Home = () => {
  const testId = "home";
@@ -42,7 +41,7 @@ const Home = () => {
    <Headings title="Tests" type="h4" />
    <Figure
     alt="IMAGEM AQUI"
-    src={jess}
+    src="assets/images/about-me.png"
     title="Teste"
     width="300"
     height="auto"

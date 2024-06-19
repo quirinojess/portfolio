@@ -13,6 +13,12 @@ const RowCenter = (element: keyof JSX.IntrinsicElements) => styled[element]`
  align-items: center;
 `;
 
+const RowStart = (element: keyof JSX.IntrinsicElements) => styled[element]`
+ display: flex;
+ justify-content: center;
+ align-items: flex-start;
+`;
+
 const RowBetween = (element: keyof JSX.IntrinsicElements) => styled[element]`
  display: flex;
  justify-content: space-between;
@@ -25,4 +31,4 @@ const RowEnd = (element: keyof JSX.IntrinsicElements) => styled[element]`
  align-items: center;
 `;
 
-export { ColumnCenter, RowCenter, RowBetween, RowEnd };
+export { ColumnCenter, RowCenter, RowStart, RowBetween, RowEnd };
