@@ -15,6 +15,7 @@ import { HomeContent } from "content";
 
 const Home = () => {
  const testId = "home";
+
  const {
   headingHome,
   button,
@@ -32,18 +33,30 @@ const Home = () => {
   <S.Main data-testid={testId}>
    <Header />
 
-   <Sections flex="column" align="start" justify="start">
+   <Sections
+    flex="column"
+    align="start"
+    justify="start"
+    id={`${testId}-projects`}>
     <Heading content={headingHome} activeH1 />
     <Paragraph content={description} proportion={"threeFourths"} />
     <Button content={button} />
    </Sections>
 
-   <Sections flex="column" align="start" justify="start">
+   <Sections
+    flex="column"
+    align="start"
+    justify="start"
+    id={`${testId}-experience`}>
     <Headings title="Experience" type="h2" />
     <Timeline content={experience} />
    </Sections>
 
-   <Sections flex="row" align="center" justify="space-between">
+   <Sections
+    flex="row"
+    align="center"
+    justify="space-between"
+    id={`${testId}-about`}>
     <Heading content={headingAbout} />
     <Figure
      alt="Serious woman with dark hair and pink blouse"
@@ -55,12 +68,20 @@ const Home = () => {
     <Paragraph content={descriptionAbout} proportion={"threeFourths"} />
    </Sections>
 
-   <Sections flex="row" align="center" justify="space-between">
+   <Sections
+    flex="row"
+    align="center"
+    justify="space-between"
+    id={`${testId}-certifieds`}>
     <Headings title="Certifieds" type="h2" />
     <List content={certifieds} isModal />
    </Sections>
 
-   <Sections flex="row" align="center" justify="space-between">
+   <Sections
+    flex="row"
+    align="center"
+    justify="space-between"
+    id={`${testId}-read`}>
     <Heading content={headingRead} />
     <Figure
      alt="Ebook cover with a girl"

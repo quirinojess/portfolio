@@ -4,6 +4,7 @@ children: React.ReactNode;
 flex: ISectionsFlex;
 justify: ISectionsJustify;
 align: ISectionsAlign;
+id: string;
 }
    
 export type ISectionsFlex = 'row' | 'column';

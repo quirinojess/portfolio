@@ -8,8 +8,8 @@ function Menu(content: { content: IMenu }) {
  const navbarMap = content.content.map(item => (
   <S.NavItem
    key={item.id}
-   onClick={() => handleClick(item.path)}
-   onKeyDown={() => handleClick(item.path)}>
+   onClick={() => handleClick(item.path, false, item.scrollTarget)}
+   onKeyDown={() => handleClick(item.path, false, item.scrollTarget)}>
    {item.label}
   </S.NavItem>
  ));
