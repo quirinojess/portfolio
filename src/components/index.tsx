@@ -1,5 +1,7 @@
 export { default as Button } from "./Button";
 export { default as Figure } from "./Figure";
+export { default as Footer } from "./Footer";
+export { default as Header } from "./Header";
 export { default as Heading } from "./Heading";
 export { default as Headings } from "./Headings";
 export { default as Icons } from "./Icons";
@@ -9,5 +11,6 @@ export { default as Marquee } from "./Marquee";
 export { default as Menu } from "./Menu";
 export { default as Modal } from "./Modal";
 export { default as Paragraph } from "./Paragraph";
+export { default as Sections } from "./Sections";
 export { default as Social } from "./Social";
 export { default as Timeline } from "./Timeline";

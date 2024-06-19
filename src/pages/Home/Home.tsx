@@ -1,70 +1,100 @@
 import {
- Logo,
- Menu,
+ Header,
  Heading,
  Button,
  Paragraph,
  Headings,
  Figure,
  List,
- Marquee,
  Timeline,
- Social,
+ Sections,
+ Footer,
 } from "components";
 import * as S from "./styled";
 import { HomeContent } from "content";
 
 const Home = () => {
  const testId = "home";
+
  const {
-  menu,
-  heading,
+  headingHome,
   button,
   description,
   certifieds,
-  skills,
   experience,
-  social,
+  headingAbout,
+  descriptionAbout,
+  headingRead,
+  descriptionRead,
+  buttonRead,
  } = HomeContent;
 
  return (
   <S.Main data-testid={testId}>
-   <S.Header>
-    <Logo />
-    <Menu content={menu} />
-   </S.Header>
-   <Heading content={heading} />
+   <Header />
 
-   <Paragraph content={description} proportion={"threeFourths"} />
-   <Button content={button} />
+   <Sections
+    flex="column"
+    align="start"
+    justify="start"
+    id={`${testId}-projects`}>
+    <Heading content={headingHome} activeH1 />
+    <Paragraph content={description} proportion={"threeFourths"} />
+    <Button content={button} />
+   </Sections>
 
-   <S.Section>
+   <Sections
+    flex="column"
+    align="start"
+    justify="start"
+    id={`${testId}-experience`}>
     <Headings title="Experience" type="h2" />
     <Timeline content={experience} />
-   </S.Section>
+   </Sections>
 
-   <S.Section>
-    <Headings title="Certifieds" type="h2" />
-    <List content={certifieds} isModal />
-   </S.Section>
-
-   <S.Section>
-    <S.AlignTitles>
-     <Headings title="ABOUT" type="h2" />
-     <Headings title="Jessica Quirino" type="h3" />
-    </S.AlignTitles>
+   <Sections
+    flex="row"
+    align="center"
+    justify="space-between"
+    id={`${testId}-about`}>
+    <Heading content={headingAbout} />
     <Figure
      alt="Serious woman with dark hair and pink blouse"
      src="assets/images/about-me.png"
      title="Jessica Quirino"
-     width="130px"
+     width="200px"
      height="auto"
     />
-    <Paragraph content={description} proportion={"full"} />
-   </S.Section>
+    <Paragraph content={descriptionAbout} proportion={"threeFourths"} />
+   </Sections>
 
-   <Social content={social} />
-   <Marquee content={skills} />
+   <Sections
+    flex="row"
+    align="center"
+    justify="space-between"
+    id={`${testId}-certifieds`}>
+    <Headings title="Certifieds" type="h2" />
+    <List content={certifieds} isModal />
+   </Sections>
+
+   <Sections
+    flex="row"
+    align="center"
+    justify="space-between"
+    id={`${testId}-read`}>
+    <Heading content={headingRead} />
+    <Figure
+     alt="Ebook cover with a girl"
+     src="assets/images/ebook-ia.png"
+     title="IA NO FRONT END - Potencialize seu desenvolvimento"
+     width="180px"
+     height="auto"
+    />
+    <Paragraph content={descriptionRead} proportion={"half"} />
+    <Button content={buttonRead} />
+   </Sections>
+
+   <Footer />
   </S.Main>
  );
 };

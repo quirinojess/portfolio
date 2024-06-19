@@ -14,7 +14,7 @@ export const Circle = styled.div`
 `;
 
 export const Period = styled.span`
- font-size: ${props => props.theme.typography.large};
+ font-size: ${props => props.theme.typography.medium};
  color: ${props => props.theme.colors.white};
  margin-bottom: ${props => props.theme.spacing.medium};
  font-weight: 100;
@@ -26,12 +26,11 @@ export const TimelineItemContainer = styled(ColumnCenter("div"))`
  color: ${props => props.theme.colors.white};
  width: ${props => props.theme.proportions.full};
  h3 {
-  font-size: ${props => props.theme.typography.large};
-  margin: ${props => props.theme.spacing.extraSmall} 0;
+  margin: ${props => props.theme.spacing.medium} 0;
  }
  h4 {
   font-size: ${props => props.theme.typography.small};
-  margin: ${props => props.theme.spacing.small} 0;
+  margin: ${props => props.theme.spacing.medium} 0;
  }
  p {
   margin-top: -${props => props.theme.spacing.extraSmall};

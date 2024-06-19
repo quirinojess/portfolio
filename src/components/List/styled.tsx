@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { RowBetween } from "themes/CommonAligns/CommonAligns";
+import { ColumnStart, RowBetween } from "themes/CommonAligns/CommonAligns";
 
 export const List = styled.ul`
  line-height: ${props => props.theme.spacing.small};
@@ -17,9 +17,7 @@ export const ListItem = styled(RowBetween("li"))`
  }
 `;
 
-export const ListItemTitle = styled.div`
- display: flex;
- flex-direction: column;
+export const ListItemTitle = styled(ColumnStart("div"))`
  span {
   color: ${props => props.theme.colors.secondary};
   font-size: ${props => props.theme.typography.small};
@@ -27,7 +25,7 @@ export const ListItemTitle = styled.div`
  }
  p {
   color: ${props => props.theme.colors.white};
-  font-size: ${props => props.theme.typography.large};
+  font-size: ${props => props.theme.typography.medium};
   font-weight: 200;
  }
 `;
