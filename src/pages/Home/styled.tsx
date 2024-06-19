@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { RowBetween } from "themes/CommonAligns/CommonAligns";
+import { ColumnStart, RowBetween } from "themes/CommonAligns/CommonAligns";
 
 export const Main = styled.div`
  width: ${props => props.theme.proportions.threeFourths};
@@ -8,4 +8,13 @@ export const Main = styled.div`
 
 export const Header = styled(RowBetween("div"))`
  width: ${props => props.theme.proportions.full};
+`;
+
+export const Section = styled(RowBetween("div"))`
+ width: ${props => props.theme.proportions.full};
+ gap: 0 ${props => props.theme.sizes.verySmall};
+`;
+
+export const AlignTitles = styled(ColumnStart("div"))`
+ width: ${props => props.theme.proportions.auto};
 `;

@@ -30,26 +30,41 @@ const Home = () => {
  return (
   <S.Main data-testid={testId}>
    <S.Header>
-    <Logo /> <Menu content={menu} />
+    <Logo />
+    <Menu content={menu} />
    </S.Header>
    <Heading content={heading} />
-   <Button content={button} />
+
    <Paragraph content={description} proportion={"threeFourths"} />
-   <Headings title="Tests" type="h1" />
-   <Headings title="Tests" type="h2" />
-   <Headings title="Tests" type="h3" />
-   <Headings title="Tests" type="h4" />
-   <Figure
-    alt="IMAGEM AQUI"
-    src="assets/images/about-me.png"
-    title="Teste"
-    width="300"
-    height="auto"
-   />
-   <List content={certifieds} isModal />
-   <Marquee content={skills} />
-   <Timeline content={experience} />
+   <Button content={button} />
+
+   <S.Section>
+    <Headings title="Experience" type="h2" />
+    <Timeline content={experience} />
+   </S.Section>
+
+   <S.Section>
+    <Headings title="Certifieds" type="h2" />
+    <List content={certifieds} isModal />
+   </S.Section>
+
+   <S.Section>
+    <S.AlignTitles>
+     <Headings title="ABOUT" type="h2" />
+     <Headings title="Jessica Quirino" type="h3" />
+    </S.AlignTitles>
+    <Figure
+     alt="Serious woman with dark hair and pink blouse"
+     src="assets/images/about-me.png"
+     title="Jessica Quirino"
+     width="130px"
+     height="auto"
+    />
+    <Paragraph content={description} proportion={"full"} />
+   </S.Section>
+
    <Social content={social} />
+   <Marquee content={skills} />
   </S.Main>
  );
 };

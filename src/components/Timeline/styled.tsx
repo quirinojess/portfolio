@@ -27,10 +27,11 @@ export const TimelineItemContainer = styled(ColumnCenter("div"))`
  width: ${props => props.theme.proportions.full};
  h3 {
   font-size: ${props => props.theme.typography.large};
+  margin: ${props => props.theme.spacing.extraSmall} 0;
  }
  h4 {
   font-size: ${props => props.theme.typography.small};
-  margin-bottom: ${props => props.theme.spacing.extraSmall};
+  margin: ${props => props.theme.spacing.small} 0;
  }
  p {
   margin-top: -${props => props.theme.spacing.extraSmall};
