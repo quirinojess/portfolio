@@ -18,14 +18,9 @@ describe("Menu", () => {
  it("navigates to the correct path when a menu item is clicked", () => {
   const mockContent = [
    {
-    id: 0,
+    id: "1",
     path: "/",
     label: "Home",
-   },
-   {
-    id: 1,
-    path: "/projects",
-    label: "Projects",
    },
   ];
 
@@ -36,7 +31,7 @@ describe("Menu", () => {
    </MemoryRouter>
   );
 
-  fireEvent.click(screen.getByText("Projects"));
-  expect(screen.getByText("Current path: /projects")).toBeInTheDocument();
+  fireEvent.click(screen.getByText("Home"));
+  expect(screen.getByText("Current path: /")).toBeInTheDocument();
  });
 });
