@@ -12,9 +12,20 @@ import {
 } from "components";
 import * as S from "./styled";
 import { HomeContent } from "content";
+import useActiveSection from "hooks/useActiveSection";
 
 const Home = () => {
  const testId = "home";
+
+ const sectionIds = [
+  `${testId}-projects`,
+  `${testId}-experience`,
+  `${testId}-about`,
+  `${testId}-certifieds`,
+  `${testId}-read`,
+ ];
+
+ const activeSection = useActiveSection(sectionIds);
 
  const {
   headingHome,
@@ -37,7 +48,8 @@ const Home = () => {
     flex="column"
     align="start"
     justify="start"
-    id={`${testId}-projects`}>
+    id={`${testId}-projects`}
+    isVisible={activeSection === `${testId}-projects`}>
     <Heading content={headingHome} activeH1 />
     <Paragraph content={description} proportion={"threeFourths"} />
     <Button content={button} />
@@ -47,7 +59,8 @@ const Home = () => {
     flex="column"
     align="start"
     justify="start"
-    id={`${testId}-experience`}>
+    id={`${testId}-experience`}
+    isVisible={activeSection === `${testId}-experience`}>
     <Headings title="Experience" type="h2" />
     <Timeline content={experience} />
    </Sections>
@@ -56,7 +69,8 @@ const Home = () => {
     flex="row"
     align="center"
     justify="space-between"
-    id={`${testId}-about`}>
+    id={`${testId}-about`}
+    isVisible={activeSection === `${testId}-about`}>
     <Heading content={headingAbout} />
     <Figure
      alt="Serious woman with dark hair and pink blouse"
@@ -72,7 +86,8 @@ const Home = () => {
     flex="row"
     align="center"
     justify="space-between"
-    id={`${testId}-certifieds`}>
+    id={`${testId}-certifieds`}
+    isVisible={activeSection === `${testId}-certifieds`}>
     <Headings title="Certifieds" type="h2" />
     <List content={certifieds} isModal />
    </Sections>
@@ -81,7 +96,8 @@ const Home = () => {
     flex="row"
     align="center"
     justify="space-between"
-    id={`${testId}-read`}>
+    id={`${testId}-read`}
+    isVisible={activeSection === `${testId}-read`}>
     <Heading content={headingRead} />
     <Figure
      alt="Ebook cover with a girl"

@@ -5,6 +5,7 @@ flex: ISectionsFlex;
 justify: ISectionsJustify;
 align: ISectionsAlign;
 id: string;
+isVisible?: boolean;
 }
    
 export type ISectionsFlex = 'row' | 'column';
