@@ -25,6 +25,12 @@ const RowStart = (element: keyof JSX.IntrinsicElements) => styled[element]`
  align-items: flex-start;
 `;
 
+const RowAround = (element: keyof JSX.IntrinsicElements) => styled[element]`
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+`;
+
 const RowBetween = (element: keyof JSX.IntrinsicElements) => styled[element]`
  display: flex;
  justify-content: space-between;
@@ -50,6 +56,7 @@ export {
  ColumnStart,
  RowCenter,
  RowStart,
+ RowAround,
  RowBetween,
  RowBetweenStart,
  RowEnd,

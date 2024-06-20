@@ -4,6 +4,7 @@ export const ShadowDiv = styled.div<{ x: number; y: number }>`
  position: fixed;
  left: ${props => props.x}px;
  top: ${props => props.y}px;
+ z-index: 99999999999999;
  width: 1px;
  height: 1px;
  border-radius: ${props => props.theme.proportions.half};

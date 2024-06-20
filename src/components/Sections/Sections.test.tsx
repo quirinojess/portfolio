@@ -10,7 +10,7 @@ const renderWithTheme = (component: ReactNode) => {
 
 describe("renders Sections component", () => {
  renderWithTheme(
-  <Sections flex="row" justify="start" align="start">
+  <Sections flex="row" justify="start" align="start" id="test">
    <div data-testid="child-component">Test Child</div>
   </Sections>
  );
