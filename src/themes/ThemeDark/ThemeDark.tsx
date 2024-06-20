@@ -79,6 +79,7 @@ const ThemeDark = {
   bold: "3",
   extraBold: "4",
   black: "5",
+  extraBlack: "8",
  },
 };
 
