@@ -26,5 +26,6 @@ export const SocialItem = styled.a`
  transition: ${props => props.theme.transitions.short};
  &:hover{
 fill: ${props => props.theme.colors.secondary} !important;
+transform: scale(1.2);
 }
 `;

@@ -21,9 +21,10 @@ export const Button = styled.button`
  position: relative;
  user-select: none;
  touch-action: manipulation;
-
+ transition: ${props => props.theme.transitions.short};
  &:hover {
   animation: ${colorChange} ${props => props.theme.transitions.medium} linear
    infinite;
+  transform: scale(0.9);
  }
 `;
