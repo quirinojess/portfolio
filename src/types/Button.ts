@@ -15,4 +15,3 @@ export interface IButton {
     type: 'button' | 'submit' | 'reset' | undefined;
     isExternal?: boolean;
 }
-   
