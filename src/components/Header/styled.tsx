@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { RowBetween } from "themes/CommonAligns/CommonAligns";
+import { RowAround } from "themes/CommonAligns/CommonAligns";
 
-export const Header = styled(RowBetween("header"))`
- width: ${props => props.theme.proportions.threeFourths};
+export const Header = styled(RowAround("header"))`
+ width: ${props => props.theme.proportions.full};
  margin-bottom: 500px;
  position: fixed;
  top: 0;

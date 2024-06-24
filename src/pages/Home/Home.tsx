@@ -1,5 +1,4 @@
 import {
- Header,
  Heading,
  Button,
  Paragraph,
@@ -8,7 +7,6 @@ import {
  List,
  Timeline,
  Sections,
- Footer,
 } from "components";
 import * as S from "./styled";
 import { HomeContent } from "content";
@@ -42,8 +40,6 @@ const Home = () => {
 
  return (
   <S.Main data-testid={testId}>
-   <Header />
-
    <Sections
     flex="column"
     align="start"
@@ -54,7 +50,6 @@ const Home = () => {
     <Paragraph content={description} proportion={"threeFourths"} />
     <Button content={button} />
    </Sections>
-
    <Sections
     flex="column"
     align="start"
@@ -109,8 +104,6 @@ const Home = () => {
     <Paragraph content={descriptionRead} proportion={"half"} />
     <Button content={buttonRead} />
    </Sections>
-
-   <Footer />
   </S.Main>
  );
 };

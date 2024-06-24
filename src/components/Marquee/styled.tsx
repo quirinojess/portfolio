@@ -11,6 +11,8 @@ export const Marquee = styled.div`
  position: relative;
  display: flex;
  overflow: hidden;
+ background: ${props => props.theme.colors.darkDeep};
+ z-index: 999999;
  width: ${props => props.theme.proportions.full};
  margin: ${props => props.theme.spacing.extraLarge} 0;
  border-top: ${props => props.theme.borders.thin};

@@ -12,7 +12,7 @@ export const Modal = styled(ColumnCenter("div"))`
  position: fixed;
  top: 0;
  left: 0;
- z-index: 999;
+ z-index: 999999;
  width: ${props => props.theme.proportions.full};
  height: ${props => props.theme.proportions.full};
  background: ${props => props.theme.colors.transparency};

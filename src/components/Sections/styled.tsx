@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import {
  ISectionsAlign,
  ISectionsFlex,
@@ -18,9 +18,13 @@ export const Sections = styled.section<{
  align-items: ${({ align }) => align};
  gap: ${props => props.theme.spacing.large}
   ${props => props.theme.spacing.medium};
- margin-top: ${props => props.theme.spacing.extraBig};
  opacity: ${props => (props.isVisible ? "1" : "0")};
- transform: translateY(${props => (props.isVisible ? "0" : "20px")});
- transition: opacity ${props => props.theme.transitions.short},
-  transform ${props => props.theme.transitions.short};
+ transition: opacity ${props => props.theme.transitions.short};
+ margin-top: ${props => props.theme.spacing.extraBig};
+ scroll-margin-top: ${props => props.theme.spacing.extraBig};
+ ${props => css`
+  @media (max-width: ${props.theme.breakpoints.mobile}) {
+   align-items: flex-start;
+  }
+ `}
 `;

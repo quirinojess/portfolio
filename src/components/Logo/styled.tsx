@@ -16,8 +16,19 @@ const pathAnimation = (strokeWidth: string | undefined) => css`
  animation: ${reveal} ${props => props.theme.transitions.long} forwards;
 `;
 
+export const Logo = styled.button`
+ border: none;
+ background: none;
+ cursor: pointer;
+`;
+
 export const Svg = styled.svg`
- max-width: ${props => props.theme.sizes.small};
+ width: ${props => props.theme.sizes.small};
+ ${props => css`
+  @media (max-width: ${props.theme.breakpoints.mobile}) {
+   width: ${props.theme.sizes.mediumSmall};
+  }
+ `}
 `;
 
 export const Path = styled.path<{ stroke?: string; strokeWidth?: string }>`

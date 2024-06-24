@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const H1 = styled.h1`
  color: ${props => props.theme.colors.white};
@@ -6,6 +6,12 @@ export const H1 = styled.h1`
  font-weight: 800;
  line-height: ${props => props.theme.spacing.extraLarge};
  margin: 0;
+ ${props => css`
+  @media (max-width: ${props.theme.breakpoints.mobile}) {
+   font-size: ${props => props.theme.typography.h3};
+   line-height: ${props => props.theme.spacing.big};
+  }
+ `}
 `;
 
 export const H2 = styled.h2`
@@ -14,6 +20,11 @@ export const H2 = styled.h2`
  font-weight: 800;
  line-height: ${props => props.theme.spacing.large};
  margin: ${props => props.theme.spacing.medium} 0;
+ ${props => css`
+  @media (max-width: ${props.theme.breakpoints.mobile}) {
+   font-size: ${props => props.theme.typography.h4};
+  }
+ `}
 `;
 
 export const H3 = styled.h3`
