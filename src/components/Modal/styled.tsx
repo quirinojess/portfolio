@@ -1,11 +1,16 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ColumnCenter, RowEnd } from "themes/CommonAligns/CommonAligns";
 
 export const ModalClose = styled(RowEnd("button"))`
- width: ${props => props.theme.proportions.half};
  background: none;
  border: none;
  cursor: pointer;
+ width: ${props => props.theme.proportions.half};
+ ${props => css`
+  @media (max-width: ${props.theme.breakpoints.mobile}) {
+   width: ${props => props.theme.proportions.threeFourths};
+  }
+ `}
 `;
 
 export const Modal = styled(ColumnCenter("div"))`
@@ -24,6 +29,11 @@ export const ModalContainer = styled.div`
  border-radius: ${props => props.theme.borderRadius.small};
  width: ${props => props.theme.proportions.half};
  height: auto;
+ ${props => css`
+  @media (max-width: ${props.theme.breakpoints.mobile}) {
+   width: ${props => props.theme.proportions.threeFourths};
+  }
+ `}
  img {
   max-width: ${props => props.theme.proportions.full};
   height: auto;
