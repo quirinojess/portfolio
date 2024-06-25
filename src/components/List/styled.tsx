@@ -3,6 +3,7 @@ import { ColumnStart, RowBetween } from "themes/CommonAligns/CommonAligns";
 
 export const List = styled.ul`
  line-height: ${props => props.theme.spacing.small};
+ min-width: ${props => props.theme.proportions.threeFourths};
 `;
 
 export const ListItem = styled(RowBetween("li"))`
@@ -25,8 +26,9 @@ export const ListItemTitle = styled(ColumnStart("div"))`
  }
  p {
   color: ${props => props.theme.colors.white};
-  font-size: ${props => props.theme.typography.medium};
+  font-size: ${props => props.theme.typography.h5};
   font-weight: 200;
+  line-height: ${props => props.theme.spacing.large};
  }
 `;
 
@@ -34,6 +36,8 @@ export const ListItemLink = styled.a`
  color: ${props => props.theme.colors.white};
  font-size: ${props => props.theme.typography.verySmall};
  font-weight: 700;
+ line-height: ${props => props.theme.spacing.medium};
  text-decoration: none;
  cursor: pointer;
+ text-align: right;
 `;

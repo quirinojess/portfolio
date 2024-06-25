@@ -8,12 +8,11 @@ function Timeline({ content }: ITimeline) {
   <S.TimelineItemContainer key={item.id}>
    <S.Period>{item.date}</S.Period>
    <S.Circle />
-   <Headings title={item.company} type={"h4"} />
-   <Headings title={item.title} type={"h3"} />
-   <Paragraph
-    content={{ text: item.description }}
-    proportion={"threeFourths"}
-   />
+   <S.TimelineItem>
+    <Headings title={item.company} type={"h4"} />
+    <Headings title={item.title} type={"h3"} />
+    <Paragraph content={{ text: item.description }} proportion={"full"} />
+   </S.TimelineItem>
   </S.TimelineItemContainer>
  ));
 

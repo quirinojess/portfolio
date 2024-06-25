@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { RowEnd } from "themes/CommonAligns/CommonAligns";
 
 const colorChange = keyframes`
@@ -15,14 +15,19 @@ export const NavItem = styled.button`
  border: none;
  cursor: pointer;
  font-size: ${props => props.theme.typography.medium};
- padding: ${props => props.theme.spacing.medium};
+ padding: ${props => props.theme.spacing.small};
  color: ${props => props.theme.colors.white};
  margin: 0 ${props => props.theme.spacing.small};
  outline: 0;
  position: relative;
  user-select: none;
  touch-action: manipulation;
-
+ ${props => css`
+  @media (max-width: ${props.theme.breakpoints.mobile}) {
+   font-size: ${props => props.theme.typography.small};
+   padding: ${props => props.theme.spacing.verySmall};
+  }
+ `}
  &:after {
   content: "";
   border: 1px solid;

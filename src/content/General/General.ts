@@ -2,38 +2,32 @@ import { IGeneral } from "types/General";
 
 
 const GeneralContent: IGeneral = {
- menu: [
+menu: [
   {
- id: '1', 
-  path: "home-projects",
-  label: "Projects",   
-  scrollTarget: true,
-  },
-  {
-    id: '2', 
+    id: '1', 
     path: "home-about",
     label: "About",
     scrollTarget: true,
-    },  {
-      id: '3', 
+    },  
+    {
+      id: '2', 
       path: "home-experience",
       label: "Experience",
       scrollTarget: true,
       },
       {
-        id: '4', 
+        id: '3', 
         path: "home-certifieds",
         label: "Certifieds",
         scrollTarget: true,
         },
         {
-          id: '5', 
+          id: '4', 
           path: "home-read",
           label: "Read",
           scrollTarget: true,
           },
  ],
-
 skills: [
   { id: '6', text: 'HTML5', isHighlighted: true },
   { id: '7', text: 'CSS3', isHighlighted: true },
@@ -66,7 +60,6 @@ skills: [
   { id: '24', text: 'ADOBE CC', isHighlighted: true },
   { id: '21', text: 'UX/UI', isHighlighted: true },
 ],
-
 social: [{id: '1', name: 'github', url: 'https://github.com/quirinojess'}, 
   {id: '2', name: 'linkedin', url: 'https://www.linkedin.com/in/quirinojess/'}, 
   {id: '3', name: 'codepen', url: 'https://codepen.io/jess-quirino'}

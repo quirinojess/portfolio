@@ -1,5 +1,3 @@
-
-
 export interface ISocial{
 content: ISocialContent;
 }
