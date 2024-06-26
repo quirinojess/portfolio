@@ -1,75 +1,46 @@
-<<<<<<< HEAD
-# portfolio
-🚀 my portfolio in REACTjs
-=======
-# Getting Started with Create React App
+# jessicaquirino.dev - v2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Professional portfolio.
+Made with **Typescript/React** and hosted on **GitHub**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔧 Installation & Set Up
 
-### `npm start`
+Install and use the correct version of Node (<v16) using [NVM](https://github.com/nvm-sh/nvm)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    nvm install
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Install dependencies
 
-### `npm test`
+    npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Start the development server
 
-### `npm run build`
+    npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧪 Running tests
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run all tests
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    npm run test
 
-### `npm run eject`
+to run a single test
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    npm --test nameSingleTest
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📦 Production
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Generate a full static production build
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    npm run build
 
-## Learn More
+## 🛠️ Made with
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [TYPESCRIPT](https://www.typescriptlang.org/) - The programming language
+- [REACT](https://react.dev/)- The library web interface
+- [STYLED COMPONENTS](https://styled-components.com/) - The pattern for styles
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📄 License
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> ba76015 (feat: first commit)
+The project is under license [GNU Affero General Public License v3.0](https://github.com/quirinojess/portfolio/blob/main/LICENSE).
