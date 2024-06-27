@@ -17,6 +17,9 @@ describe("Marquee", () => {
 
   renderWithTheme(<Marquee content={content} />);
 
-  expect(screen.getAllByText(/Test/)).toHaveLength(content.length * 10);
+  content.forEach(item => {
+   const elements = screen.getAllByText(item.text);
+   expect(elements).toHaveLength(10);
+  });
  });
 });

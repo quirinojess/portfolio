@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { RowBetween } from "themes/CommonAligns/CommonAligns";
+import { RowBetween } from "themes/CommonAligns";
 
 export const marqueeAnimation = keyframes`
 from {transform: translateX(0);}

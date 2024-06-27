@@ -1,3 +1,10 @@
-import * as CommonAligns from "./CommonAligns";
-
-export { CommonAligns };
+export {
+ ColumnCenter,
+ ColumnStart,
+ RowCenter,
+ RowStart,
+ RowAround,
+ RowBetween,
+ RowBetweenStart,
+ RowEnd,
+} from "./CommonAligns";

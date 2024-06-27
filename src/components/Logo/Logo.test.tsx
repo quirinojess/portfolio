@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Logo } from "./Logo";
 import { ThemeDark } from "themes";
 import { ThemeProvider } from "styled-components";
@@ -10,7 +11,11 @@ const renderWithTheme = (component: ReactNode) => {
 
 describe("Logo", () => {
  it("renders without crashing", () => {
-  renderWithTheme(<Logo />);
+  renderWithTheme(
+   <Router>
+    <Logo />
+   </Router>
+  );
   expect(screen.getByTestId("logotype")).toBeInTheDocument();
  });
 });

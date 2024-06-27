@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { ColumnCenter, RowEnd } from "themes/CommonAligns/CommonAligns";
+import { ColumnCenter, RowEnd } from "themes/CommonAligns";
 
 export const ModalClose = styled(RowEnd("button"))`
  background: none;
@@ -13,7 +13,7 @@ export const ModalClose = styled(RowEnd("button"))`
  `}
 `;
 
-export const Modal = styled(ColumnCenter("div"))`
+export const Modal = styled(ColumnCenter("dialog"))`
  position: fixed;
  top: 0;
  left: 0;

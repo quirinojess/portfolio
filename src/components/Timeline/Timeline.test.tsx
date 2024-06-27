@@ -20,13 +20,23 @@ describe("Timeline component", () => {
  ];
 
  it("renders without crashing", () => {
-  renderWithTheme(<Timeline content={mockContent} />);
+  renderWithTheme(
+   <ThemeProvider theme={{}}>
+    <Timeline content={mockContent} />
+   </ThemeProvider>
+  );
+
   const timelineElement = screen.getByTestId("timeline");
   expect(timelineElement).toBeInTheDocument();
  });
 
  it("displays the correct content", () => {
-  renderWithTheme(<Timeline content={mockContent} />);
+  renderWithTheme(
+   <ThemeProvider theme={{}}>
+    <Timeline content={mockContent} />
+   </ThemeProvider>
+  );
+
   const dateElement = screen.getByText("2022");
   const companyElement = screen.getByText("Test Company");
   const titleElement = screen.getByText("Test Title");

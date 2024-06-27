@@ -28,7 +28,6 @@ test("renders list items correctly", () => {
 
  renderWithTheme(<List content={content} isLink={true} isModal={false} />);
 
- // Check if the list items are rendered
  const item1 = screen.getByText("Test Item 1");
  const item2 = screen.getByText("Test Item 2");
 

@@ -18,6 +18,7 @@ describe("CreateStructuredData", () => {
 
   const expectedStructuredData = {
    "@context": "https://schema.org",
+   "@type": "Project",
    name: project.name,
    description: project.description,
    url: project.url,
@@ -29,7 +30,7 @@ describe("CreateStructuredData", () => {
    datePublished: project.datePublished,
    programmingLanguage: project.programmingLanguage,
    softwareRequirements: project.softwareRequirements,
-   keywords: project.keywords,
+   keywords: "project, test",
    license: project.license,
   };
 

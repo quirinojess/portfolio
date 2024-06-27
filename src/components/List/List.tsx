@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IList, IListItem } from "types/List";
 import * as S from "./styled";
-import Modal from "components/Modal";
+import { Modal } from "components";
 import { IModalContent } from "types/Modal";
 
 function List({ content, isLink, isModal }: IList) {
@@ -18,10 +18,10 @@ function List({ content, isLink, isModal }: IList) {
 
  const modalComponent = isOpenModal && (
   <Modal setIsOpenModal={setIsOpenModal}>
-   {modalContent && modalContent.imgLink && (
+   {modalContent?.imgLink && (
     <img src={modalContent.imgLink} alt={modalContent.imgAlt} />
    )}
-   {modalContent && modalContent.text && (
+   {modalContent?.text && (
     <>
      <h2>{modalContent.text}</h2>
      <p>{modalContent.description}</p>

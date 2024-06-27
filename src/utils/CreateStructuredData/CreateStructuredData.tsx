@@ -14,6 +14,10 @@ const CreateStructuredData = (project: IStructuredData) => {
   license,
  } = project;
 
+ const formattedKeywords = Array.isArray(keywords)
+  ? keywords.join(", ")
+  : keywords;
+
  return {
   "@context": "https://schema.org",
   "@type": "Project",
@@ -28,7 +32,7 @@ const CreateStructuredData = (project: IStructuredData) => {
   datePublished,
   programmingLanguage,
   softwareRequirements,
-  keywords: keywords.join(", "),
+  keywords: formattedKeywords,
   license,
  };
 };

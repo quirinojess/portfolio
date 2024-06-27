@@ -8,18 +8,21 @@ const renderWithTheme = (component: ReactNode) => {
  return render(<ThemeProvider theme={ThemeDark}>{component}</ThemeProvider>);
 };
 
-describe("renders Social component", () => {
+describe("Social component", () => {
  const mockContent = [
-  { id: "1", name: "github" as const, url: "https://github.com" },
-  { id: "2", name: "linkedin" as const, url: "https://linkedin.com" },
-  { id: "3", name: "codepen" as const, url: "https://codepen.io" },
+  { id: "1", name: "github", url: "https://github.com" },
+  { id: "2", name: "linkedin", url: "https://linkedin.com" },
+  { id: "3", name: "codepen", url: "https://codepen.io" },
  ];
 
- renderWithTheme(<Social content={mockContent} />);
+ it("renders social links correctly", () => {
+  renderWithTheme(<Social content={mockContent} />);
 
- mockContent.forEach(item => {
-  const linkElement = screen.getByRole("link", { name: `social-${item.name}` });
-  expect(linkElement).toBeInTheDocument();
-  expect(linkElement).toHaveAttribute("href", item.url);
+  mockContent.forEach(item => {
+   const linkElement = screen.getByTestId(item.name);
+
+   expect(linkElement).toBeInTheDocument();
+   expect(linkElement).toHaveAttribute("href", item.url);
+  });
  });
 });

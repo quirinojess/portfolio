@@ -10,7 +10,7 @@ const Head = () => {
 
   const linkIcon = document.createElement("link");
   linkIcon.rel = "icon";
-  linkIcon.href = "%PUBLIC_URL%/assets/favicon/icon.ico";
+  linkIcon.href = "assets/favicon/icon.ico";
   document.head.appendChild(linkIcon);
 
   const linkPreconnect1 = document.createElement("link");

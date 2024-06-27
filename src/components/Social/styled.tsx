@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { ColumnCenter } from "themes/CommonAligns/CommonAligns";
+import { ColumnCenter } from "themes/CommonAligns";
 
 export const Social = styled(ColumnCenter("div"))`
  position: fixed;

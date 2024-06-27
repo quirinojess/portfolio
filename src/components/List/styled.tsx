@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ColumnStart, RowBetween } from "themes/CommonAligns/CommonAligns";
+import { ColumnStart, RowBetween } from "themes/CommonAligns";
 
 export const List = styled.ul`
  line-height: ${props => props.theme.spacing.small};

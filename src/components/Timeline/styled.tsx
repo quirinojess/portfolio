@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { RowStart, ColumnCenter } from "themes/CommonAligns/CommonAligns";
+import { RowStart, ColumnCenter } from "themes/CommonAligns";
 
 export const TimelineContainer = styled(RowStart("div"))`
  width: ${props => props.theme.proportions.full};
