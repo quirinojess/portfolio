@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { RowAround } from "themes/CommonAligns/CommonAligns";
+import { RowAround } from "themes/CommonAligns";
 
 export const Header = styled(RowAround("header"))`
  width: ${props => props.theme.proportions.full};

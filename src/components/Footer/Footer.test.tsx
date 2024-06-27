@@ -8,12 +8,14 @@ const renderWithTheme = (component: ReactNode) => {
  return render(<ThemeProvider theme={ThemeDark}>{component}</ThemeProvider>);
 };
 
-describe("renders Footer component", () => {
- renderWithTheme(<Footer />);
+describe("Footer component", () => {
+ test("renders Footer component with marquee and social elements", () => {
+  renderWithTheme(<Footer />);
 
- const marqueeElement = screen.getByTestId("marquee");
- expect(marqueeElement).toBeInTheDocument();
+  const marqueeElement = screen.getByTestId("marquee");
+  expect(marqueeElement).toBeInTheDocument();
 
- const socialElement = screen.getByTestId("social");
- expect(socialElement).toBeInTheDocument();
+  const socialElement = screen.getByTestId("social");
+  expect(socialElement).toBeInTheDocument();
+ });
 });

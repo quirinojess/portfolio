@@ -8,13 +8,15 @@ const renderWithTheme = (component: ReactNode) => {
  return render(<ThemeProvider theme={ThemeDark}>{component}</ThemeProvider>);
 };
 
-describe("renders Sections component", () => {
- renderWithTheme(
-  <Sections flex="row" justify="start" align="start" id="test">
-   <div data-testid="child-component">Test Child</div>
-  </Sections>
- );
+describe("Sections component", () => {
+ test("renders child component", () => {
+  renderWithTheme(
+   <Sections flex="row" justify="start" align="start" id="test">
+    <div data-testid="child-component">Test Child</div>
+   </Sections>
+  );
 
- const childElement = screen.getByTestId("child-component");
- expect(childElement).toBeInTheDocument();
+  const childElement = screen.getByTestId("child-component");
+  expect(childElement).toBeInTheDocument();
+ });
 });

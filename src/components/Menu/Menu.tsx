@@ -3,6 +3,8 @@ import * as S from "./styled";
 import { useHandleClick } from "../../hooks";
 
 function Menu(content: IMenu) {
+ const testId = "menu";
+
  const { handleClick } = useHandleClick();
 
  const navbarMap = content.content.map((item: IMenuItem) => {
@@ -16,6 +18,6 @@ function Menu(content: IMenu) {
   );
  });
 
- return <S.Navbar>{navbarMap}</S.Navbar>;
+ return <S.Navbar data-testid={testId}>{navbarMap}</S.Navbar>;
 }
 export { Menu };

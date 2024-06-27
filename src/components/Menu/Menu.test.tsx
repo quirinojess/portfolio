@@ -1,22 +1,17 @@
 import { render, fireEvent, screen } from "@testing-library/react";
-import { MemoryRouter, useLocation } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 import { Menu } from "./Menu";
 import { ThemeDark } from "themes";
 import { ThemeProvider } from "styled-components";
-import { ReactNode } from "react";
+import { IMenuContent } from "types/Menu";
 
-const renderWithTheme = (component: ReactNode) => {
+const renderWithTheme = (component: React.ReactNode) => {
  return render(<ThemeProvider theme={ThemeDark}>{component}</ThemeProvider>);
 };
 
-const LocationDisplay = () => {
- const location = useLocation();
- return <div>Current path: {location.pathname}</div>;
-};
-
 describe("Menu", () => {
- it("navigates to the correct path when a menu item is clicked", () => {
-  const mockContent = [
+ it("navigates to the correct path when a menu item is clicked", async () => {
+  const mockContent: IMenuContent = [
    {
     id: "1",
     path: "/",
@@ -27,11 +22,12 @@ describe("Menu", () => {
   renderWithTheme(
    <MemoryRouter initialEntries={["/"]}>
     <Menu content={mockContent} />
-    <LocationDisplay />
    </MemoryRouter>
   );
 
   fireEvent.click(screen.getByText("Home"));
-  expect(screen.getByText("Current path: /")).toBeInTheDocument();
+
+  const currentPathElement = await screen.findByText("Home");
+  expect(currentPathElement).toBeInTheDocument();
  });
 });

@@ -20,8 +20,8 @@ const mockContent: IButtonContent = {
 
 const handleClick = jest.fn();
 
-jest.mock("hooks", () => ({
- useHandleClick: () => jest.fn(),
+jest.mock("../../hooks", () => ({
+ useHandleClick: () => ({ handleClick }),
 }));
 
 describe("Button", () => {
@@ -33,7 +33,9 @@ describe("Button", () => {
     onKeyDown={handleClick}
    />
   );
-  expect(screen.getByRole("button")).toHaveTextContent("Test Button");
+  const button = screen.getByRole("button", { name: /testLabel/i });
+  expect(button).toBeInTheDocument();
+  expect(button).toHaveTextContent("Test Button");
  });
 
  it("calls handleClick on click", () => {
@@ -44,9 +46,8 @@ describe("Button", () => {
     onKeyDown={handleClick}
    />
   );
-
-  fireEvent.click(screen.getByRole("button"));
-
-  expect(handleClick).toHaveBeenCalled();
+  const button = screen.getByRole("button", { name: /testLabel/i });
+  fireEvent.click(button);
+  expect(handleClick).toHaveBeenCalledTimes(1);
  });
 });

@@ -1,5 +1,3 @@
-// useActiveSection.ts
-
 import { useEffect, useState } from "react";
 
 function useActiveSection(sectionIds: string[]) {

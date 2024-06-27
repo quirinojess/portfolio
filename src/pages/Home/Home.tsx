@@ -10,7 +10,7 @@ import {
 } from "components";
 import * as S from "./styled";
 import { HomeContent } from "content";
-import useActiveSection from "hooks/useActiveSection";
+import { useActiveSection } from "hooks";
 
 const Home = () => {
  const testId = "home";

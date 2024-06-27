@@ -11,14 +11,18 @@ const config: Config.InitialOptions = {
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '^@/(.*)$': '<rootDir>/src/$1',
-    '^themes$': '<rootDir>/src/themes',
+    '^themes$': '<rootDir>/src/themes',  
+    '^themes/(.*)$': '<rootDir>/src/themes/$1', 
     '^pages$': '<rootDir>/src/pages',
     '^hooks$': '<rootDir>/src/hooks',
     '^types$': '<rootDir>/src/types',
+    '^utils$': '<rootDir>/src/utils',
+    '^constants/(.*)$': '<rootDir>/src/constants/$1',
     '^components$': '<rootDir>/src/components',
     '^content$': '<rootDir>/src/content',
   },
-  setupFilesAfterEnv: ['<rootDir>/src/tests/setupTests.ts'], // Fixed the path
+  
+  setupFilesAfterEnv: ['<rootDir>/src/tests/setupTests.ts'], 
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
   coverageThreshold: {
     global: {

@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
-import { RowEnd } from "themes/CommonAligns/CommonAligns";
+import { RowEnd } from "themes/CommonAligns";
 
 const colorChange = keyframes`
   0% { border-color: var(--border-color-primary); }

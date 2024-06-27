@@ -4,6 +4,6 @@ content: ISocialContent;
 
 export interface ISocialContent extends Array<{
 id: string;
-name: 'github' | 'linkedin' | 'codepen';
+name: 'github' | 'linkedin' | 'codepen' | string;
 url: string;
 }> {}

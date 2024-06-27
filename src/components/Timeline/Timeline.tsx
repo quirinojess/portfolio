@@ -1,9 +1,10 @@
 import { ITimeline } from "types/Timeline";
 import * as S from "./styled";
-import Headings from "components/Headings";
-import Paragraph from "components/Paragraph";
+import { Headings, Paragraph } from "components";
 
 function Timeline({ content }: ITimeline) {
+ const testId = "timeline";
+
  const itensMap = content.map(item => (
   <S.TimelineItemContainer key={item.id}>
    <S.Period>{item.date}</S.Period>
@@ -16,6 +17,8 @@ function Timeline({ content }: ITimeline) {
   </S.TimelineItemContainer>
  ));
 
- return <S.TimelineContainer> {itensMap}</S.TimelineContainer>;
+ return (
+  <S.TimelineContainer data-testid={testId}> {itensMap}</S.TimelineContainer>
+ );
 }
 export { Timeline };
