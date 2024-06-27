@@ -22,9 +22,12 @@ export const Sections = styled.section<{
  transition: opacity ${props => props.theme.transitions.short};
  margin-top: ${props => props.theme.spacing.extraBig};
  scroll-margin-top: ${props => props.theme.spacing.extraBig};
+ margin-left: ${props => props.theme.spacing.small};
  ${props => css`
   @media (max-width: ${props.theme.breakpoints.mobile}) {
    align-items: flex-start;
+   margin-top: ${props => props.theme.spacing.mediumBig};
+   scroll-margin-top: ${props => props.theme.spacing.mediumBig};
   }
  `}
 `;

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const ShadowDiv = styled.div<{ x: number; y: number }>`
  position: fixed;
@@ -15,4 +15,9 @@ export const ShadowDiv = styled.div<{ x: number; y: number }>`
   -${props => props.theme.proportions.half},
   -${props => props.theme.proportions.half}
  );
+ ${props => css`
+  @media (max-width: ${props.theme.breakpoints.mobile}) {
+   display: none;
+  }
+ `}
 `;
