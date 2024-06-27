@@ -25,7 +25,7 @@ export const NavItem = styled.button`
  ${props => css`
   @media (max-width: ${props.theme.breakpoints.mobile}) {
    font-size: ${props => props.theme.typography.small};
-   padding: ${props => props.theme.spacing.verySmall};
+   padding: ${props => props.theme.spacing.extraSmall};
   }
  `}
  &:after {
