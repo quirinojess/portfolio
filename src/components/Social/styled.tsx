@@ -5,10 +5,9 @@ export const Social = styled(ColumnCenter("div"))`
  position: fixed;
  bottom: 0;
  left: 0;
- padding-bottom: ${props => props.theme.spacing.extraLarge};
+ padding-bottom: ${props => props.theme.spacing.extraBig};
  ${props => css`
   @media (max-width: ${props.theme.breakpoints.mobile}) {
-   padding-bottom: ${props => props.theme.spacing.extraLarge};
    justify-content: flex-end;
   }
  `}
@@ -36,7 +35,7 @@ transform: scale(1.2);
  ${props => css`
   @media (max-width: ${props.theme.breakpoints.mobile}) {
    padding: 0;
-   transform: scale(0.8);
+   max-width: 13px;
   }
  `}
 

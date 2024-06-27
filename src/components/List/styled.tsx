@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ColumnStart, RowBetween } from "themes/CommonAligns";
 
 export const List = styled.ul`
@@ -26,9 +26,14 @@ export const ListItemTitle = styled(ColumnStart("div"))`
  }
  p {
   color: ${props => props.theme.colors.white};
-  font-size: ${props => props.theme.typography.h5};
+  font-size: ${props => props.theme.typography.medium};
   font-weight: 200;
   line-height: ${props => props.theme.spacing.large};
+  ${props => css`
+   @media (max-width: ${props.theme.breakpoints.mobile}) {
+    font-size: ${props => props.theme.typography.small};
+   }
+  `}
  }
 `;
 
@@ -40,4 +45,5 @@ export const ListItemLink = styled.a`
  text-decoration: none;
  cursor: pointer;
  text-align: right;
+ min-width: ${props => props.theme.sizes.extraMedium};
 `;

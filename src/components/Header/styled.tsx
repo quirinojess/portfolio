@@ -1,12 +1,18 @@
-import styled from "styled-components";
-import { RowAround } from "themes/CommonAligns";
+import styled, { css } from "styled-components";
+import { RowCenter } from "themes/CommonAligns";
 
-export const Header = styled(RowAround("header"))`
+export const Header = styled(RowCenter("header"))`
  width: ${props => props.theme.proportions.full};
- margin-bottom: 500px;
  position: fixed;
  top: 0;
  z-index: 9999;
  background: ${props => props.theme.colors.darkDeep};
- padding: ${props => props.theme.spacing.large} 0;
+ padding: ${props => props.theme.spacing.medium} 0
+  ${props => props.theme.spacing.small} 0;
+ gap: 0 50%;
+ ${props => css`
+  @media (max-width: ${props.theme.breakpoints.mobile}) {
+   gap: 0 4%;
+  }
+ `}
 `;
