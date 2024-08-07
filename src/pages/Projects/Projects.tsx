@@ -4,7 +4,7 @@ import { ProjectsContent } from "content";
 import { useActiveSection } from "hooks";
 
 const Projects = () => {
- const testId = "Projects";
+ const testId = "projects";
 
  const sectionIds = [`${testId}-head`];
 
