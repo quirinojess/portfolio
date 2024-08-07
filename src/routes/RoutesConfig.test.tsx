@@ -31,4 +31,16 @@ describe("RoutesConfig", () => {
 
   expect(screen.getByTestId("home")).toBeInTheDocument();
  });
+
+ it("should render Projects component for default route", () => {
+  render(
+   <ThemeProvider theme={ThemeDark}>
+    <MemoryRouter initialEntries={["/projects"]}>
+     <RoutesConfig />
+    </MemoryRouter>
+   </ThemeProvider>
+  );
+
+  expect(screen.getByTestId("projects")).toBeInTheDocument();
+ });
 });

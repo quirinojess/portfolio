@@ -5,27 +5,33 @@ const GeneralContent: IGeneral = {
 menu: [
   {
     id: '1', 
-    path: "home-about",
+    path: "/",
+    scroll: "home-about",
     label: "About",
-    scrollTarget: true,
     },  
     {
-      id: '2', 
-      path: "home-experience",
+      id: '2',   
+      path: "/",
+      scroll: "home-experience",
       label: "Experience",
-      scrollTarget: true,
       },
       {
-        id: '3', 
-        path: "home-certifieds",
+        id: '3',   
+        path: "/",
+        scroll: "home-certifieds",
         label: "Certifieds",
-        scrollTarget: true,
+
         },
         {
-          id: '4', 
-          path: "home-read",
+          id: '4',   
+          path: "/projects",
+          label: "Projects",
+          },
+        {
+          id: '5',   
+          path: "/",
+          scroll: "home-read",
           label: "Read",
-          scrollTarget: true,
           },
  ],
 skills: [

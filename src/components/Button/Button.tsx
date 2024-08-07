@@ -10,14 +10,15 @@ function Button({ content }: IButton) {
   ariaExpanded,
   ariaLabel,
   type,
+  scrollTo,
   isExternal,
  } = content;
  const { handleClick } = useHandleClick();
 
  return (
   <S.Button
-   onClick={() => handleClick(target, isExternal)}
-   onKeyDown={() => handleClick(target, isExternal)}
+   onClick={() => handleClick(target, scrollTo, isExternal)}
+   onKeyDown={() => handleClick(target, scrollTo, isExternal)}
    type={type}
    aria-label={ariaLabel}
    aria-expanded={ariaExpanded}
