@@ -4,18 +4,21 @@ import { Logo } from "./Logo";
 import { ThemeDark } from "themes";
 import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
+import ScrollProvider from "contexts/ScrollContext";
 
 const renderWithTheme = (component: ReactNode) => {
- return render(<ThemeProvider theme={ThemeDark}>{component}</ThemeProvider>);
+ return render(
+  <ThemeProvider theme={ThemeDark}>
+   <ScrollProvider>{component}</ScrollProvider>
+  </ThemeProvider>
+ );
 };
 
-describe("Logo", () => {
- it("renders without crashing", () => {
-  renderWithTheme(
-   <Router>
-    <Logo />
-   </Router>
-  );
-  expect(screen.getByTestId("logotype")).toBeInTheDocument();
- });
+test("renders without crashing", () => {
+ renderWithTheme(
+  <Router>
+   <Logo />
+  </Router>
+ );
+ expect(screen.getByTestId("logo")).toBeInTheDocument();
 });

@@ -6,17 +6,20 @@ import { GlobalStyle } from "./themes";
 import { ThemeDark } from "./themes/";
 import RoutesConfig from "./routes";
 import { Footer, Header, MouseShadow } from "components";
+import ScrollContextProvider from "contexts/ScrollContext";
 
 createRoot(document.getElementById("root")!).render(
  <React.StrictMode>
   <ThemeProvider theme={ThemeDark}>
-   <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <GlobalStyle />
-    <Header />
-    <MouseShadow />
-    <RoutesConfig />
-    <Footer />
-   </BrowserRouter>
+   <ScrollContextProvider>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+     <GlobalStyle />
+     <Header />
+     <MouseShadow />
+     <RoutesConfig />
+     <Footer />
+    </BrowserRouter>
+   </ScrollContextProvider>
   </ThemeProvider>
  </React.StrictMode>
 );

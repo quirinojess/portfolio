@@ -4,9 +4,14 @@ import { Menu } from "./Menu";
 import { ThemeDark } from "themes";
 import { ThemeProvider } from "styled-components";
 import { IMenuContent } from "types/Menu";
+import ScrollProvider from "contexts/ScrollContext";
 
 const renderWithTheme = (component: React.ReactNode) => {
- return render(<ThemeProvider theme={ThemeDark}>{component}</ThemeProvider>);
+ return render(
+  <ThemeProvider theme={ThemeDark}>
+   <ScrollProvider>{component}</ScrollProvider>
+  </ThemeProvider>
+ );
 };
 
 describe("Menu", () => {
