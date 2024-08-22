@@ -2,7 +2,7 @@ import { IButton } from "types/Button";
 import * as S from "./styled";
 import { useHandleClick } from "../../hooks";
 
-function Button({ content, variant = "primary" }: IButton) {
+function Button({ content, variant = "primary", isProject }: IButton) {
  const {
   label,
   target,
@@ -13,12 +13,17 @@ function Button({ content, variant = "primary" }: IButton) {
   scrollTo,
   isExternal,
  } = content;
+
  const { handleClick } = useHandleClick();
+
+ const handleButtonClick = () => {
+  handleClick(target, scrollTo, isExternal, isProject);
+ };
 
  return (
   <S.Button
-   onClick={() => handleClick(target, scrollTo, isExternal)}
-   onKeyDown={() => handleClick(target, scrollTo, isExternal)}
+   onClick={handleButtonClick}
+   onKeyDown={handleButtonClick}
    type={type}
    aria-label={ariaLabel}
    aria-expanded={ariaExpanded}

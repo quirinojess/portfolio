@@ -15,7 +15,7 @@ function ProjectsCard({ content }: ICard) {
     height={image.height}
    />
    <Headings title={title} type={"h3"} />
-   <Button content={button} variant="secondary" />
+   <Button content={button} variant="secondary" isProject />
   </S.ProjectsCard>
  );
 }

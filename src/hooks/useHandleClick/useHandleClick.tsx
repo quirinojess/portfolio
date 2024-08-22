@@ -6,7 +6,21 @@ function useHandleClick() {
  const location = useLocation();
  const { setScrollTarget } = useScroll();
 
- function handleClick(route: string, scrollTo?: string, isExternal?: boolean) {
+ function handleClick(
+  route: string,
+  scrollTo?: string,
+  isExternal?: boolean,
+  isProject?: boolean
+ ) {
+  if (isProject) {
+   const projectRoute = `/project/${route}`;
+
+   if (location.pathname !== projectRoute) {
+    navigate(projectRoute);
+   }
+   return;
+  }
+
   if (isExternal) {
    window.open(route, "_blank");
    return;

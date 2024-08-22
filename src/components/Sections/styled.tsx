@@ -11,6 +11,7 @@ export const Sections = styled.section<{
  align: ISectionsAlign;
  isVisible?: boolean;
 }>`
+ width: ${props => props.theme.proportions.full};
  display: flex;
  flex-wrap: wrap;
  flex-direction: ${({ flex }) => flex};
