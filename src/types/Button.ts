@@ -4,6 +4,7 @@ export interface IButton {
     onClick?: () => void;
     onKeyDown?: () => void;
     variant?: IButtonVariant; 
+    isProject?: boolean;    
    }
    
    export type IButtonVariant =  'primary' | 'secondary'; 
@@ -20,3 +21,5 @@ export interface IButton {
     isExternal?: boolean;    
     variant?: IButtonVariant; 
 }
+
+export type IBackButtonContent = IButtonContent[];

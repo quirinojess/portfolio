@@ -68,6 +68,9 @@ social: [{id: '1', name: 'github', url: 'https://github.com/quirinojess'},
   {id: '2', name: 'linkedin', url: 'https://www.linkedin.com/in/quirinojess/'}, 
   {id: '3', name: 'codepen', url: 'https://codepen.io/jess-quirino'}
 ],
+backButton:[
+  {label: "See all projects", target:'/projects', ariaLabel: "See all projects", ariaExpanded: false, ariaControls: "projects", type: "button"},
+]
 };
 
 export { GeneralContent };
