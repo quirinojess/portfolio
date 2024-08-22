@@ -46,7 +46,7 @@ const ThemeDark = {
  proportions: {
   full: "100%",
   threeFourths: "70%",
-  half: "50%",
+  half: "45%",
   oneFourth: "25%",
  },
  breakpoints: {

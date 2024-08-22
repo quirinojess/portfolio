@@ -2,7 +2,7 @@ import { IButton } from "types/Button";
 import * as S from "./styled";
 import { useHandleClick } from "../../hooks";
 
-function Button({ content }: IButton) {
+function Button({ content, variant = "primary" }: IButton) {
  const {
   label,
   target,
@@ -22,7 +22,8 @@ function Button({ content }: IButton) {
    type={type}
    aria-label={ariaLabel}
    aria-expanded={ariaExpanded}
-   aria-controls={ariaControls}>
+   aria-controls={ariaControls}
+   variant={variant}>
    {label}
   </S.Button>
  );
