@@ -1,7 +1,7 @@
 import { renderHook } from "@testing-library/react-hooks";
 import { BrowserRouter as Router } from "react-router-dom";
 import { useHandleClick } from "./useHandleClick";
-import ScrollProvider from "contexts/ScrollContext";
+import ScrollProvider from "context/ScrollContext";
 
 describe("useHandleClick", () => {
  it("returns handleClick function", () => {
