@@ -12,7 +12,7 @@ async function getProjects() {
   return data;
  } catch (error) {
   throw new Error(
-   "Falha ao carregar os projetos. Por favor, tente mais tarde."
+   "Failed to load projects. Please try again later."
   );
  }
 }

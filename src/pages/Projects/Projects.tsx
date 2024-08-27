@@ -1,4 +1,4 @@
-import { Heading, Sections, ProjectsCard } from "components";
+import { Heading, Headings, Sections, ProjectsCard } from "components";
 import * as S from "./styled";
 import { ProjectsContent } from "content";
 import { useActiveSection } from "hooks";
@@ -6,6 +6,7 @@ import { ScrollToTop } from "utils";
 import { useEffect } from "react";
 import { ProjectsService } from "services";
 import { useProjects } from "context/ProjectContext";
+import { toast } from "react-toastify";
 
 const Projects = () => {
  const testId = "projects";
@@ -21,38 +22,41 @@ const Projects = () => {
     setProjects(result);
    }
   } catch (error: any) {
-   console.log("Error loading posts", error);
+   toast.error(error.message, {
+    position: "top-right",
+    autoClose: 4000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    draggable: true,
+    theme: "dark",
+   });
   }
  }
 
- const projectsMap = projects?.length ? (
-  projects.map((project: any) => (
-   <ProjectsCard
-    key={project.id}
-    content={{
-     id: project.id,
-     image: {
-      alt: project.title.rendered,
-      src: project.fimg_url,
-      title: project.title.rendered,
-      width: "400",
-      height: "400",
-     },
+ const projectsMap = projects?.map((project: any) => (
+  <ProjectsCard
+   key={project.id}
+   content={{
+    id: project.id,
+    image: {
+     alt: project.title.rendered,
+     src: project.fimg_url,
      title: project.title.rendered,
-     button: {
-      label: "View Full",
-      target: `${project.id}`,
-      ariaLabel: "project-content",
-      ariaExpanded: false,
-      ariaControls: `project-${project.id}`,
-      type: "button",
-     },
-    }}
-   />
-  ))
- ) : (
-  <p>No projects available.</p>
- );
+     width: "400",
+     height: "400",
+    },
+    title: project.title.rendered,
+    button: {
+     label: "View Full",
+     target: `${project.id}`,
+     ariaLabel: "project-content",
+     ariaExpanded: false,
+     ariaControls: `project-${project.id}`,
+     type: "button",
+    },
+   }}
+  />
+ ));
 
  useEffect(() => {
   loadProjects();
@@ -68,7 +72,11 @@ const Projects = () => {
     id={`${testId}-projects`}
     isVisible={activeSection === `${testId}-projects`}>
     <Heading content={headingProjects} activeH1 />
-    {projectsMap}
+    {projectsMap ? (
+     projectsMap
+    ) : (
+     <Headings title={"No projects available"} type={"h4"} />
+    )}
    </Sections>
   </S.Main>
  );

@@ -22,4 +22,3 @@ export interface IButton {
     variant?: IButtonVariant; 
 }
 
-export type IBackButtonContent = IButtonContent[];

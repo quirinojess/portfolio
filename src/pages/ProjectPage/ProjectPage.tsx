@@ -10,7 +10,8 @@ import { TProject } from "types/Project";
 
 const ProjectPage = () => {
  const { id } = useParams<{ id: string }>();
- const { backButton } = GeneralContent;
+ const { buttons } = GeneralContent;
+ const { backButton } = buttons;
  const testId = "project";
  const sectionIds = [`${testId}-content`];
  const activeSection = useActiveSection(sectionIds);
@@ -43,7 +44,7 @@ const ProjectPage = () => {
     ) : (
      "No project selected"
     )}
-    <Button content={backButton[0]} />
+    <Button content={backButton} />
    </Sections>
   </S.Main>
  );
