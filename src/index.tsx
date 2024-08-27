@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { GlobalStyle } from "./themes";
 import { ThemeDark } from "./themes/";
 import RoutesConfig from "./routes";
-import { Footer, Header, MouseShadow } from "components";
+import { Footer, Header, MouseShadow, ErrorBoundary } from "components";
 import { ScrollContextProvider, ProjectContextProvider } from "context";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -19,7 +19,9 @@ createRoot(document.getElementById("root")!).render(
      <ToastContainer />
      <Header />
      <MouseShadow />
-     <RoutesConfig />
+     <ErrorBoundary>
+      <RoutesConfig />
+     </ErrorBoundary>
      <Footer />
     </BrowserRouter>
    </ProjectContextProvider>

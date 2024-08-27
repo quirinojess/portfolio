@@ -1,4 +1,5 @@
 export { default as Button } from "./Button";
+export { default as ErrorBoundary } from "./ErrorBoundary";
 export { default as Figure } from "./Figure";
 export { default as Footer } from "./Footer";
 export { default as Header } from "./Header";
