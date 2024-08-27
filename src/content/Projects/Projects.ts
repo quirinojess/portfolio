@@ -1,9 +1,7 @@
-import { IProjects } from "types/Projects";
+import { TProjectsPage } from "types/Project";
 
-
-const ProjectsContent: IProjects = {
-headingProjects: {title: "Projects", subtitle: "See my work"},
-
+const ProjectsContent: TProjectsPage = {
+ headingProjects: { title: "Projects", subtitle: "See my work" },
 };
 
 export { ProjectsContent };

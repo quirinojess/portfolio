@@ -6,7 +6,7 @@ export const Header = styled(RowAround("header"))`
  margin-bottom: 500px;
  position: fixed;
  top: 0;
- z-index: 9999;
+ z-index: 1;
  background: ${props => props.theme.colors.darkDeep};
  padding: ${props => props.theme.spacing.large} 0;
 `;

@@ -11,4 +11,8 @@ export const Paragraph = styled.p<{ proportion: IParagraphProportions }>`
    width: ${props => props.theme.proportions.full};
   }
  `}
+ img {
+  max-width: 100%;
+  height: auto;
+ }
 `;

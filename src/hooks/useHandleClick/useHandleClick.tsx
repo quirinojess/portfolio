@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import { useScroll } from "contexts/ScrollContext";
+import { useScroll } from "context/ScrollContext";
 
 function useHandleClick() {
  const navigate = useNavigate();

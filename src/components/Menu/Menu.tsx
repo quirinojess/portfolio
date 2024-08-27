@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { IMenu, IMenuItem } from "types/Menu";
 import * as S from "./styled";
 import { useHandleClick } from "hooks";
-import { useScroll } from "contexts/ScrollContext";
+import { useScroll } from "context/ScrollContext";
 
 function Menu(content: IMenu) {
  const testId = "menu";

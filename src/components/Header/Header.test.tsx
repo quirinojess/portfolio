@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
 import { Header } from "./Header";
 import { MemoryRouter } from "react-router-dom";
-import ScrollProvider from "contexts/ScrollContext";
+import ScrollProvider from "context/ScrollContext";
 
 const renderWithTheme = (component: ReactNode) => {
  return render(

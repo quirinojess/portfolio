@@ -12,6 +12,7 @@ const renderWithTheme = (component: ReactNode) => {
 describe("ProjectsCard", () => {
  it("renders the image, title, and button", () => {
   const mockContent: ICardContent = {
+   id: 1,
    image: {
     alt: "Test image",
     src: "test-image.jpg",

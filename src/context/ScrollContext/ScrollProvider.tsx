@@ -1,8 +1,8 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { ScrollContext } from "./ScrollContext";
 import { IScrollProvider } from "types/Scroll";
 
-export const ScrollProvider: React.FC<IScrollProvider> = ({ children }) => {
+const ScrollProvider = ({ children }: IScrollProvider) => {
  const [scrollTarget, setScrollTarget] = useState<string | null>(null);
 
  const value = useMemo(
@@ -14,3 +14,5 @@ export const ScrollProvider: React.FC<IScrollProvider> = ({ children }) => {
   <ScrollContext.Provider value={value}>{children}</ScrollContext.Provider>
  );
 };
+
+export { ScrollProvider };

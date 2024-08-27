@@ -5,21 +5,26 @@ import { BrowserRouter } from "react-router-dom";
 import { GlobalStyle } from "./themes";
 import { ThemeDark } from "./themes/";
 import RoutesConfig from "./routes";
-import { Footer, Header, MouseShadow } from "components";
-import ScrollContextProvider from "contexts/ScrollContext";
+import { Footer, Header, MouseShadow, ErrorBoundary } from "components";
+import { ScrollContextProvider, ProjectContextProvider } from "context";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 createRoot(document.getElementById("root")!).render(
- <React.StrictMode>
-  <ThemeProvider theme={ThemeDark}>
-   <ScrollContextProvider>
+ <ThemeProvider theme={ThemeDark}>
+  <ScrollContextProvider>
+   <ProjectContextProvider>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
      <GlobalStyle />
+     <ToastContainer />
      <Header />
      <MouseShadow />
-     <RoutesConfig />
+     <ErrorBoundary>
+      <RoutesConfig />
+     </ErrorBoundary>
      <Footer />
     </BrowserRouter>
-   </ScrollContextProvider>
-  </ThemeProvider>
- </React.StrictMode>
+   </ProjectContextProvider>
+  </ScrollContextProvider>
+ </ThemeProvider>
 );
