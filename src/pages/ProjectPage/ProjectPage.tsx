@@ -1,51 +1,27 @@
 import { useEffect } from "react";
-import { Headings, Paragraph, Sections, Figure, Button } from "components";
+import { Headings, Paragraph, Sections, Button } from "components";
 import * as S from "./styled";
 import { useActiveSection } from "hooks";
 import { useParams } from "react-router-dom";
 import { GeneralContent } from "content";
 import { ScrollToTop } from "utils";
+import { useProjects } from "context/ProjectContext";
+import { TProject } from "types/Project";
 
 const ProjectPage = () => {
- const { id } = useParams();
-
+ const { id } = useParams<{ id: string }>();
  const { backButton } = GeneralContent;
-
  const testId = "project";
-
  const sectionIds = [`${testId}-content`];
-
  const activeSection = useActiveSection(sectionIds);
 
- const mockApi = {
-  id: 1,
-  images: [
-   {
-    alt: "image1",
-    src: "/assets/images/thumb-card.png",
-    title: "image 1",
-   },
-   {
-    alt: "image2",
-    src: "/assets/images/thumb-card.png",
-    title: "image 2",
-   },
-  ],
-  title: "Project One",
-  button: { label: "View Full", target: "button-dois" },
-  content: { text: "loremIpsum  loremIpsum  loremIpsum loremIpsu" },
- };
+ const { projects } = useProjects();
 
- const imagesMap = mockApi.images.map(image => (
-  <Figure
-   key={image.src}
-   alt={image.alt}
-   src={image.src}
-   title={image.title}
-   width="900"
-   height="auto"
-  />
- ));
+ const projectId = Number(id);
+
+ const singleProject = projects?.find(
+  (project: TProject) => project.id === projectId
+ );
 
  useEffect(() => {
   ScrollToTop();
@@ -59,11 +35,10 @@ const ProjectPage = () => {
     justify="start"
     id={`${testId}-content`}
     isVisible={activeSection === `${testId}-content`}>
-    {id ? (
+    {singleProject ? (
      <>
-      <Headings title={id} type={"h1"} />
-      {imagesMap}
-      <Paragraph content={mockApi.content} proportion="full" />
+      <Headings title={singleProject.title.rendered} type={"h1"} />
+      <Paragraph content={singleProject.content} proportion="full" />
      </>
     ) : (
      "No project selected"
