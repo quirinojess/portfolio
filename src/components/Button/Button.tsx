@@ -2,7 +2,7 @@ import { IButton } from "types/Button";
 import * as S from "./styled";
 import { useHandleClick } from "../../hooks";
 
-function Button({ content, variant = "primary", isProject }: IButton) {
+function Button({ content, variant = "primary", paramType }: IButton) {
  const {
   label,
   target,
@@ -17,7 +17,7 @@ function Button({ content, variant = "primary", isProject }: IButton) {
  const { handleClick } = useHandleClick();
 
  const handleButtonClick = () => {
-  handleClick(target, scrollTo, isExternal, isProject);
+  handleClick(target, scrollTo, isExternal, paramType);
  };
 
  return (
