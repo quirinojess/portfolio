@@ -21,7 +21,7 @@ export const Sections = styled.section<{
   ${props => props.theme.spacing.medium};
  opacity: ${props => (props.isVisible ? "1" : "0")};
  transition: opacity ${props => props.theme.transitions.short};
- margin-top: ${props => props.theme.spacing.extraBig};
+ margin-top: ${props => props.theme.spacing.veryBig};
  scroll-margin-top: ${props => props.theme.spacing.extraBig};
  ${props => css`
   @media (max-width: ${props.theme.breakpoints.mobile}) {
