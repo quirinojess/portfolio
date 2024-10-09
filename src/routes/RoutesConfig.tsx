@@ -6,6 +6,7 @@ const RoutesConfig = () => {
   <Switch>
    <Route path="/" element={<Home />} />
    <Route path="/projects" element={<Projects />} />
+   <Route path="/projects/:category" element={<Projects />} />
    <Route path="/project/:id" element={<ProjectPage />} />
    <Route path="*" element={<Navigate to="/" />} />
   </Switch>
