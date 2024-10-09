@@ -26,6 +26,7 @@ export const H1 = styled.h1`
  line-height: ${props => props.theme.typography.small};
  font-weight: 700;
  margin: 0;
+ margin-top: ${props => props.theme.spacing.veryBig};
  ${props => css`
   @media (max-width: ${props.theme.breakpoints.mobile}) {
    font-size: ${props => props.theme.typography.extraLarge};

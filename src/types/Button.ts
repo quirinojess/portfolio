@@ -3,14 +3,14 @@ export interface IButton {
     content: IButtonContent;
     onClick?: () => void;
     onKeyDown?: () => void;
-    variant?: IButtonVariant; 
-    isProject?: boolean;    
-   }
-   
-   export type IButtonVariant =  'primary' | 'secondary'; 
-   
-   
-   export interface IButtonContent{
+    variant?: IButtonVariant;
+    paramType?: string;
+}
+
+export type IButtonVariant = 'primary' | 'secondary';
+
+
+export interface IButtonContent {
     label: string;
     target: string;
     ariaLabel: string;
@@ -18,7 +18,7 @@ export interface IButton {
     ariaControls: string;
     type: 'button' | 'submit' | 'reset' | undefined;
     scrollTo?: string;
-    isExternal?: boolean;    
-    variant?: IButtonVariant; 
+    isExternal?: boolean;
+    variant?: IButtonVariant;
 }
 

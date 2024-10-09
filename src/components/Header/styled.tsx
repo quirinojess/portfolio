@@ -3,7 +3,7 @@ import { RowAround } from "themes/CommonAligns";
 
 export const Header = styled(RowAround("header"))`
  width: ${props => props.theme.proportions.full};
- margin-bottom: 500px;
+ margin-bottom: 400px;
  position: fixed;
  top: 0;
  z-index: 1;

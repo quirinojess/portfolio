@@ -10,12 +10,22 @@ function useHandleClick() {
   route: string,
   scrollTo?: string,
   isExternal?: boolean,
-  isProject?: boolean
+  paramType?: string
  ) {
-  if (isProject) {
-   const projectRoute = `/project/${route}`;
+  if (paramType) {
+   const projectRoute = (() => {
+    switch (paramType) {
+     case "project":
+      return `/project/${route}`;
+     case "category":
+      return `/projects/${route}`;
+     default:
+      console.warn(`Unknown paramType: ${paramType}`);
+      return null;
+    }
+   })();
 
-   if (location.pathname !== projectRoute) {
+   if (projectRoute && location.pathname !== projectRoute) {
     navigate(projectRoute);
    }
    return;
