@@ -6,7 +6,7 @@ export const Navbar = styled.div`
  right: 15%;
  ${props => css`
   @media (max-width: ${props.theme.breakpoints.tablet}) {
-   top: 420px;
+   top: 80vw;
    right: auto;
   }
  `}

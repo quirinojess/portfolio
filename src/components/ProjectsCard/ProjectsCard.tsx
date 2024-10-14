@@ -5,8 +5,12 @@ import { Button, Figure, Headings } from "components";
 function ProjectsCard({ content }: ICard) {
  const { image, title, button } = content;
 
+ const handleClick = () => {
+  window.location.href = `project/${button.target}`;
+ };
+
  return (
-  <S.ProjectsCard>
+  <S.ProjectsCard onClick={handleClick}>
    <Figure
     alt={image.alt}
     src={image.src}
@@ -15,7 +19,7 @@ function ProjectsCard({ content }: ICard) {
     height={image.height}
    />
    <Headings title={title} type={"h3"} />
-   <Button content={button} variant="secondary" isProject />
+   <Button content={button} variant="secondary" paramType="project" />
   </S.ProjectsCard>
  );
 }
