@@ -1,6 +1,7 @@
 export interface IParagraph {
  content: IParagraphContent;
  proportion: IParagraphProportions;
+ isPost?: boolean;
 }
 
 export type IParagraphProportions =

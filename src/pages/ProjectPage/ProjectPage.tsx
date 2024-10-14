@@ -32,14 +32,14 @@ const ProjectPage = () => {
   <S.Main data-testid={testId}>
    <Sections
     flex="column"
-    align="start"
+    align="center"
     justify="start"
     id={`${testId}-content`}
     isVisible={activeSection === `${testId}-content`}>
     {singleProject ? (
      <>
       <Headings title={singleProject.title.rendered} type={"h1"} />
-      <Paragraph content={singleProject.content} proportion="full" />
+      <Paragraph content={singleProject.content} proportion="full" isPost />
      </>
     ) : (
      "No project selected"
