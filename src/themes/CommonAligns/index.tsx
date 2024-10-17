@@ -1,6 +1,7 @@
 export {
  ColumnCenter,
  ColumnStart,
+ ColumnAround,
  RowCenter,
  RowStart,
  RowAround,

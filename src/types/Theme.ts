@@ -35,7 +35,8 @@ export type TTheme = {
       extraBig: string;
       center: string;
     };
-    sizes: {
+    sizes: {      
+      hiperSmall: string;
       extraSmall: string;
       verySmall: string;
       mediumSmall: string;
