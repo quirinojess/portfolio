@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import { Headings, Paragraph, Sections, Button } from "components";
-import * as S from "./styled";
+import { Headings, Paragraph, Sections, Button, Main } from "components";
 import { useActiveSection } from "hooks";
 import { useParams } from "react-router-dom";
 import { GeneralContent } from "content";
@@ -29,7 +28,7 @@ const ProjectPage = () => {
  }, []);
 
  return (
-  <S.Main data-testid={testId}>
+  <Main testId={testId}>
    <Sections
     flex="column"
     align="center"
@@ -46,7 +45,7 @@ const ProjectPage = () => {
     )}
     <Button content={backButton} />
    </Sections>
-  </S.Main>
+  </Main>
  );
 };
 
