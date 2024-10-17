@@ -4,8 +4,8 @@ import {
  Sections,
  ProjectsCard,
  FilterCategories,
+ Main,
 } from "components";
-import * as S from "./styled";
 import { ProjectsContent } from "content";
 import { useActiveSection } from "hooks";
 import { ScrollToTop } from "utils";
@@ -94,7 +94,7 @@ const Projects = () => {
  }, []);
 
  return (
-  <S.Main data-testid={testId}>
+  <Main testId={testId}>
    <FilterCategories content={categories} />
    <Sections
     flex="column"
@@ -116,7 +116,7 @@ const Projects = () => {
      <Headings title={"No projects available"} type={"h4"} />
     )}{" "}
    </Sections>
-  </S.Main>
+  </Main>
  );
 };
 

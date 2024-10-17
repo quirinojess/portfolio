@@ -5,10 +5,10 @@ import {
  Headings,
  Figure,
  List,
+ Main,
  Timeline,
  Sections,
 } from "components";
-import * as S from "./styled";
 import { HomeContent } from "content";
 import { useActiveSection } from "hooks";
 
@@ -39,7 +39,7 @@ const Home = () => {
  } = HomeContent;
 
  return (
-  <S.Main data-testid={testId}>
+  <Main testId={testId}>
    <Sections
     flex="column"
     align="start"
@@ -104,7 +104,7 @@ const Home = () => {
     <Paragraph content={descriptionRead} proportion={"half"} />
     <Button content={buttonRead} />
    </Sections>
-  </S.Main>
+  </Main>
  );
 };
 
