@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
 
-export interface IScrollContext {
+export type TScrollContext = {
     scrollTarget: string | null;
     setScrollTarget: (target: string | null) => void;
   }
 
-  export interface IScrollProvider{
+  export type TScrollProvider ={
     children: ReactNode;
    }
   

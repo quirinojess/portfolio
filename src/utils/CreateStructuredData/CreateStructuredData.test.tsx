@@ -1,9 +1,9 @@
-import { IStructuredData } from "types/StructuredData";
+import { TStructuredData } from "types/StructuredData";
 import { CreateStructuredData } from "./CreateStructuredData";
 
 describe("CreateStructuredData", () => {
  it("should create structured data object correctly", () => {
-  const project: IStructuredData = {
+  const project: TStructuredData = {
    name: "Test Project",
    description: "A test project description",
    url: "https://example.com/project",

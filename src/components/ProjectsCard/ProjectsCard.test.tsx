@@ -3,7 +3,7 @@ import { ProjectsCard } from "./ProjectsCard";
 import { ThemeDark } from "themes";
 import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
-import { ICardContent } from "types/Card";
+import { TCardContent } from "types/Card";
 
 const renderWithTheme = (component: ReactNode) => {
  return render(<ThemeProvider theme={ThemeDark}>{component}</ThemeProvider>);
@@ -11,7 +11,7 @@ const renderWithTheme = (component: ReactNode) => {
 
 describe("ProjectsCard", () => {
  it("renders the image, title, and button", () => {
-  const mockContent: ICardContent = {
+  const mockContent: TCardContent = {
    id: 1,
    image: {
     alt: "Test image",

@@ -1,8 +1,8 @@
-import { IButton } from "types/Button";
+import { TButton } from "types/Button";
 import * as S from "./styled";
 import { useHandleClick } from "../../hooks";
 
-function Button({ content, variant = "primary", paramType }: IButton) {
+function Button({ content, variant = "primary", paramType }: TButton) {
  const {
   label,
   target,

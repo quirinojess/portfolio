@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { IMenu, IMenuItem } from "types/Menu";
+import { TMenu, TMenuItem } from "types/Menu";
 import * as S from "./styled";
 import { useHandleClick } from "hooks";
 import { useScroll } from "context/ScrollContext";
 
-function Menu(content: IMenu) {
+function Menu(content: TMenu) {
  const testId = "menu";
 
  const { handleClick } = useHandleClick();
@@ -19,7 +19,7 @@ function Menu(content: IMenu) {
   }
  }, [scrollTarget]);
 
- const navbarMap = content.content.map((item: IMenuItem) => {
+ const navbarMap = content.content.map((item: TMenuItem) => {
   return (
    <S.NavItem
     key={item.id}

@@ -1,11 +1,11 @@
-export interface ITimeline {
-content: ITimelineContent
+export type TTimeline = {
+content: TTimelineContent
 }
 
-export interface ITimelineContent extends Array<{
+export type TTimelineContent = Array<{
 id: string;
 title: string;
 company: string;
 description: string;
 date: string; 
-}> {}
+}>;

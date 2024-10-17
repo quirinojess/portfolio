@@ -1,6 +1,6 @@
-import { IStructuredData } from "types/StructuredData";
+import { TStructuredData } from "types/StructuredData";
 
-const CreateStructuredData = (project: IStructuredData) => {
+const CreateStructuredData = (project: TStructuredData) => {
  const {
   name,
   description,

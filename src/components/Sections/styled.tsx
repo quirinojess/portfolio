@@ -1,14 +1,14 @@
 import styled, { css } from "styled-components";
 import {
- ISectionsAlign,
- ISectionsFlex,
- ISectionsJustify,
+ TSectionsAlign,
+ TSectionsFlex,
+ TSectionsJustify,
 } from "types/Sections";
 
 export const Sections = styled.section<{
- flex: ISectionsFlex;
- justify: ISectionsJustify;
- align: ISectionsAlign;
+ flex: TSectionsFlex;
+ justify: TSectionsJustify;
+ align: TSectionsAlign;
  isVisible?: boolean;
 }>`
  width: ${props => props.theme.proportions.full};

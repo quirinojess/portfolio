@@ -1,19 +1,19 @@
-import { IButtonContent } from "./Button";
-import { IHeadingContent } from "./Heading";
-import { IListContent } from "./List";
-import { IParagraphContent } from "./Paragraph";
-import { ITimelineContent } from "./Timeline";
+import { TButtonContent } from "./Button";
+import { THeadingContent } from "./Heading";
+import { TListContent } from "./List";
+import { TParagraphContent } from "./Paragraph";
+import { TTimelineContent } from "./Timeline";
 
 
-export interface IHome{
-headingHome: IHeadingContent;
-button: IButtonContent;
-description: IParagraphContent;
-certifieds: IListContent
-experience: ITimelineContent
-headingAbout: IHeadingContent;
-descriptionAbout: IParagraphContent;
-headingRead: IHeadingContent;
-descriptionRead: IParagraphContent;
-buttonRead: IButtonContent;
+export type THome  ={
+headingHome: THeadingContent;
+button: TButtonContent;
+description: TParagraphContent;
+certifieds: TListContent
+experience: TTimelineContent
+headingAbout: THeadingContent;
+descriptionAbout: TParagraphContent;
+headingRead: THeadingContent;
+descriptionRead: TParagraphContent;
+buttonRead: TButtonContent;
 }

@@ -1,8 +1,8 @@
-import { IHeadingContent } from "./Heading";
+import { THeadingContent } from "./Heading";
 import { Dispatch, ReactNode, SetStateAction } from "react";
 
 export type TProjectsPage = {
- headingProjects: IHeadingContent;
+ headingProjects: THeadingContent;
 };
 
 export type TProjectsContext = {

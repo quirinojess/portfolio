@@ -1,5 +1,5 @@
 
-export interface IFigure{
+export type TFigure = {
 alt: string;
 src: string; 
 title: string;

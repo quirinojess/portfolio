@@ -1,8 +1,8 @@
-import { IParagraph } from "types/Paragraph";
+import { TParagraph } from "types/Paragraph";
 import { useEffect, useState } from "react";
 import * as S from "./styled";
 
-function Paragraph({ content, proportion, isPost }: IParagraph) {
+function Paragraph({ content, proportion, isPost }: TParagraph) {
  const { text, rendered } = content;
  const [elements, setElements] = useState<JSX.Element[]>([]);
 

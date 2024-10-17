@@ -1,14 +1,14 @@
 
-export interface ISections{
+export type TSections ={
 children: React.ReactNode;
-flex: ISectionsFlex;
-justify: ISectionsJustify;
-align: ISectionsAlign;
+flex: TSectionsFlex;
+justify: TSectionsJustify;
+align: TSectionsAlign;
 id: string;
 isVisible?: boolean;
 }
    
-export type ISectionsFlex = 'row' | 'column';
-export type ISectionsJustify = 'start' | 'end' | 'space-between' | 'space-around';
-export type ISectionsAlign = 'start' | 'end' | 'center';
+export type TSectionsFlex = 'row' | 'column';
+export type TSectionsJustify = 'start' | 'end' | 'space-between' | 'space-around';
+export type TSectionsAlign = 'start' | 'end' | 'center';
      

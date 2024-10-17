@@ -1,12 +1,12 @@
 import styled, { keyframes, css } from "styled-components";
-import { IButtonVariant } from "types/Button";
+import { TButtonVariant } from "types/Button";
 
 const colorChange = keyframes`
   0% { border-color: var(--border-color-primary); }
   50% { border-color: var(--border-color-secondary); }
 `;
 
-export const Button = styled.button<{ variant: IButtonVariant }>`
+export const Button = styled.button<{ variant: TButtonVariant }>`
  --border-color-primary: ${props => props.theme.colors.secondary};
  --border-color-secondary: ${props => props.theme.colors.primary};
  background: none;

@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { Headings } from "./Headings";
-import { IHeadings } from "types/Heading";
+import { THeadings } from "types/Heading";
 import { ThemeDark } from "themes";
 import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
@@ -11,7 +11,7 @@ const renderWithTheme = (component: ReactNode) => {
 
 describe("Headings", () => {
  test("renders correctly", () => {
-  const mockContent: IHeadings = {
+  const mockContent: THeadings = {
    title: "Test Title",
    type: "h1",
   };
@@ -22,7 +22,7 @@ describe("Headings", () => {
  });
 
  test("renders H1 when type is h1", () => {
-  const mockContent: IHeadings = {
+  const mockContent: THeadings = {
    title: "Test Title",
    type: "h1",
   };
@@ -34,7 +34,7 @@ describe("Headings", () => {
  });
 
  test("renders H2 when type is h2", () => {
-  const mockContent: IHeadings = {
+  const mockContent: THeadings = {
    title: "Test Title",
    type: "h2",
   };
