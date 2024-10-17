@@ -1,8 +1,8 @@
-import { ICard } from "types/Card";
+import { TCard } from "types/Card";
 import * as S from "./styled";
 import { Button, Figure, Headings } from "components";
 
-function ProjectsCard({ content }: ICard) {
+function ProjectsCard({ content }: TCard) {
  const { image, title, button } = content;
 
  const handleClick = () => {

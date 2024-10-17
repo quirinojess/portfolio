@@ -1,9 +1,9 @@
-export interface ISocial{
-content: ISocialContent;
+export type TSocial ={
+content: TSocialContent;
 }
 
-export interface ISocialContent extends Array<{
+export type TSocialContent =  Array<{
 id: string;
 name: 'github' | 'linkedin' | 'codepen' | string;
 url: string;
-}> {}
+}>;

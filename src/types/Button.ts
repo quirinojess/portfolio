@@ -1,16 +1,16 @@
 
-export interface IButton {
-    content: IButtonContent;
+export type TButton = {
+    content: TButtonContent;
     onClick?: () => void;
     onKeyDown?: () => void;
-    variant?: IButtonVariant;
+    variant?: TButtonVariant;
     paramType?: string;
 }
 
-export type IButtonVariant = 'primary' | 'secondary';
+export type TButtonVariant = 'primary' | 'secondary';
 
 
-export interface IButtonContent {
+export type TButtonContent = {
     label: string;
     target: string;
     ariaLabel: string;
@@ -19,6 +19,6 @@ export interface IButtonContent {
     type: 'button' | 'submit' | 'reset' | undefined;
     scrollTo?: string;
     isExternal?: boolean;
-    variant?: IButtonVariant;
+    variant?: TButtonVariant;
 }
 

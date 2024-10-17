@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { IIconsSvg } from "types/Icons";
+import { TIconsSvg } from "types/Icons";
 
-export const Icon = styled.svg<IIconsSvg>`
+export const Icon = styled.svg<TIconsSvg>`
  color: ${props =>
   props.color ? props.theme.colors[props.color] : props.theme.colors.deepDark};
  color: ${props => props.size};

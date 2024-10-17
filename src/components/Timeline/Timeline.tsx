@@ -1,8 +1,8 @@
-import { ITimeline } from "types/Timeline";
+import { TTimeline } from "types/Timeline";
 import * as S from "./styled";
 import { Headings, Paragraph } from "components";
 
-function Timeline({ content }: ITimeline) {
+function Timeline({ content }: TTimeline) {
  const testId = "timeline";
 
  const itensMap = content.map(item => (

@@ -1,7 +1,7 @@
-import { IHome } from "types/Home";
+import { THome } from "types/Home";
 
 
-const HomeContent: IHome = {
+const HomeContent: THome = {
 headingHome: {title: "Front End", subtitle: "Software Engineer"},
 button: {label: "See All Projects", target:'https://github.com/quirinojess?tab=repositories', ariaLabel: "See All Projects", ariaExpanded: false, ariaControls: "projects", type: "button", isExternal: true},
 description:{text: "I am a SEO front-end engineer who believes in user experience-driven development with a focus on problem-solving. For this, I design code that prioritizes simplicity while building robust and scalable applications. Welcome to my portfolio, where you will find a resume of my journey, certifications, and projects."},

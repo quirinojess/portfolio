@@ -1,11 +1,10 @@
 
-export interface IMarquee{
-content: IMarqueeContent;
-
+export type TMarquee ={
+content: TMarqueeContent;
 }
 
-export interface IMarqueeContent extends Array<{
+export type TMarqueeContent = Array<{
 id: string;
 text: string;
 isHighlighted?: boolean;
-  }> {}
+  }> ;

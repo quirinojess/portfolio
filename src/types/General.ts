@@ -1,13 +1,13 @@
-import { IButtonContent } from "./Button";
-import { IMarqueeContent } from "./Marquee";
-import { IMenuContent } from "./Menu";
-import { ISocialContent } from "./Social";
+import { TButtonContent } from "./Button";
+import { TMarqueeContent } from "./Marquee";
+import { TMenuContent } from "./Menu";
+import { TSocialContent } from "./Social";
 
 
 
-export interface IGeneral{
-menu: IMenuContent;
-skills: IMarqueeContent;
-social: ISocialContent;
-buttons : {backButton: IButtonContent,reloadButton: IButtonContent}; 
+export type TGeneral ={
+menu: TMenuContent;
+skills: TMarqueeContent;
+social: TSocialContent;
+buttons : {backButton: TButtonContent,reloadButton: TButtonContent}; 
 }

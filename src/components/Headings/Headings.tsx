@@ -1,7 +1,7 @@
-import { IHeadings } from "types/Heading";
+import { THeadings } from "types/Heading";
 import * as S from "./styled";
 
-function Headings({ title, type }: IHeadings) {
+function Headings({ title, type }: THeadings) {
  switch (type) {
   case "h1":
    return <S.H1>{title}</S.H1>;

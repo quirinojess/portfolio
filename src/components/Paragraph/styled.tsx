@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
-import { IParagraphProportions } from "types/Paragraph";
+import { TParagraphProportions } from "types/Paragraph";
 
-export const Paragraph = styled.p<{ proportion: IParagraphProportions }>`
+export const Paragraph = styled.p<{ proportion: TParagraphProportions }>`
  width: ${({ proportion, theme }) => theme.proportions[proportion] || "auto"};
  font-size: ${props => props.theme.typography.p};
  color: ${props => props.theme.colors.white};

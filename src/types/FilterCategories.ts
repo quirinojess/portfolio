@@ -1,4 +1,4 @@
-export interface TFilterCategories {
+export type TFilterCategories = {
     content: TFilterCategoriesContent;
     }
     

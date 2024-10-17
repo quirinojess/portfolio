@@ -1,4 +1,6 @@
-const ThemeDark = {
+import { TTheme } from "types/Theme";
+
+const ThemeDark: TTheme = {
  colors: {
   transparency: "rgba(51, 51, 51, 0.7)",
   white: "#f9f9f9",

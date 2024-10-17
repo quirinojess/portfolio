@@ -1,15 +1,15 @@
-import { IButtonContent } from "./Button";
-import { IFigure } from "./Figure";
+import { TButtonContent } from "./Button";
+import { TFigure } from "./Figure";
 
-export interface ICard {
- content: ICardContent;
+export type TCard = {
+ content: TCardContent;
 }
 
-export type ICardProportions = "full" | "threeFourths" | "half" | "oneFourth";
+export type TCardProportions = "full" | "threeFourths" | "half" | "oneFourth";
 
-export interface ICardContent {
+export type TCardContent = {
  id: number;
- image: IFigure;
+ image: TFigure;
  title: string;
- button: IButtonContent;
+ button: TButtonContent;
 }

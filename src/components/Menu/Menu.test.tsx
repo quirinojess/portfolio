@@ -3,7 +3,7 @@ import { MemoryRouter } from "react-router-dom";
 import { Menu } from "./Menu";
 import { ThemeDark } from "themes";
 import { ThemeProvider } from "styled-components";
-import { IMenuContent } from "types/Menu";
+import { TMenuContent } from "types/Menu";
 import ScrollProvider from "context/ScrollContext";
 
 const renderWithTheme = (component: React.ReactNode) => {
@@ -16,7 +16,7 @@ const renderWithTheme = (component: React.ReactNode) => {
 
 describe("Menu", () => {
  it("navigates to the correct path when a menu item is clicked", async () => {
-  const mockContent: IMenuContent = [
+  const mockContent: TMenuContent = [
    {
     id: "1",
     path: "/",

@@ -1,14 +1,14 @@
-export interface IHeading {
-content: IHeadingContent;
+export type THeading = {
+content: THeadingContent;
 activeH1?: boolean;
  }
  
- export interface IHeadingContent {
+ export type THeadingContent = {
   title: string;
   subtitle: string;
  }
 
- export interface IHeadings {
+ export type THeadings = {
    title: string;
    type: 'h1' | 'h2' | 'h3' | 'h4';
  }

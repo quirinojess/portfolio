@@ -1,6 +1,6 @@
-import { IGeneral } from "types/General";
+import { TGeneral } from "types/General";
 
-const GeneralContent: IGeneral = {
+const GeneralContent: TGeneral = {
  menu: [
   {
    id: "1",

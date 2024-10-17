@@ -3,13 +3,13 @@ import { Button } from "./Button";
 import { ThemeDark } from "themes";
 import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
-import { IButtonContent } from "types/Button";
+import { TButtonContent } from "types/Button";
 
 const renderWithTheme = (component: ReactNode) => {
  return render(<ThemeProvider theme={ThemeDark}>{component}</ThemeProvider>);
 };
 
-const mockContent: IButtonContent = {
+const mockContent: TButtonContent = {
  label: "Test Button",
  target: "testTarget",
  ariaControls: "testControls",

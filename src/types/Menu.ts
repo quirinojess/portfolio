@@ -1,16 +1,16 @@
 
-export interface IMenu {
-content: IMenuContent;
+export type TMenu = {
+content: TMenuContent;
 }
 
-export interface IMenuContent extends Array<{
+export type TMenuContent = Array<{
     id: string;
     path: string;
     scroll?: string;
     label: string;
-  }>  {}
+  }> ;
 
-  export interface IMenuItem {
+  export type TMenuItem = {
     id: string;
     path: string;    
     scroll?: string;

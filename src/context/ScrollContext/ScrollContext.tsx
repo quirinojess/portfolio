@@ -1,9 +1,9 @@
 import { createContext, useContext } from "react";
-import { IScrollContext } from "types/Scroll";
+import { TScrollContext } from "types/Scroll";
 
-const ScrollContext = createContext<IScrollContext | undefined>(undefined);
+const ScrollContext = createContext<TScrollContext | undefined>(undefined);
 
-export const useScroll = (): IScrollContext => {
+export const useScroll = (): TScrollContext => {
  const context = useContext(ScrollContext);
  if (!context) {
   throw new Error("useScroll must be used within a ScrollProvider");

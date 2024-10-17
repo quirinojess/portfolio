@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { IFigure } from "types/Figure";
+import { TFigure } from "types/Figure";
 
-export const Figure = styled.img<IFigure>`
+export const Figure = styled.img<TFigure>`
  width: ${props => props.width};
  height: ${props => props.height};
 `;

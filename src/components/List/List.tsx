@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { IList, IListItem } from "types/List";
+import { TList, TListItem } from "types/List";
 import * as S from "./styled";
 import { Modal } from "components";
-import { IModalContent } from "types/Modal";
+import { TModalContent } from "types/Modal";
 
-function List({ content, isLink, isModal }: IList) {
+function List({ content, isLink, isModal }: TList) {
  const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
- const [modalContent, setModalContent] = useState<IModalContent>({});
+ const [modalContent, setModalContent] = useState<TModalContent>({});
 
- const handleLinkClick = (item: IListItem) => {
+ const handleLinkClick = (item: TListItem) => {
   setModalContent({
    imgLink: item.link,
    imgAlt: item.description,

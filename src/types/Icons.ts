@@ -2,7 +2,7 @@ import { ICONSTYPES } from "constants/icons";
 
 type IconType = (typeof ICONSTYPES)[number];
 
-export interface IIcons {
+export type TIcons = {
 type: IconType;
 color?: string;
 fill?: string;
@@ -10,7 +10,7 @@ stroke?: string;
 size?: string;
 }
 
-export interface IIconsSvg {
+export type TIconsSvg = {
 color?: string;
 fill?: string;
 stroke?: string;
