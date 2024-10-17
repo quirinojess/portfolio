@@ -38,6 +38,7 @@ const ThemeDark: TTheme = {
   center: "0 auto",
  },
  sizes: {
+  hiperSmall: "2px",
   extraSmall: "8px",
   verySmall: "16px",
   mediumSmall: "40px",

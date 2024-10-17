@@ -17,6 +17,15 @@ export const ColumnStart = (element: keyof JSX.IntrinsicElements) => styled[
  flex-direction: column;
 `;
 
+export const ColumnAround = (element: keyof JSX.IntrinsicElements) => styled[
+ element
+]`
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ flex-direction: column;
+`;
+
 export const RowCenter = (element: keyof JSX.IntrinsicElements) => styled[
  element
 ]`
