@@ -20,8 +20,7 @@ function useHandleClick() {
      case "category":
       return `/projects/${route}`;
      default:
-      console.warn(`Unknown paramType: ${paramType}`);
-      return null;
+      return "/";
     }
    })();
 

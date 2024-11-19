@@ -68,7 +68,7 @@ function Paragraph({ content, proportion, isPost }: TParagraph) {
    {contentRender && (
     <S.Paragraph
      proportion={proportion}
-     dangerouslySetInnerHTML={{ __html: contentRender }}
+     dangerouslySetInnerHTML={{ __html: text || rendered || "" }}
     />
    )}
   </>

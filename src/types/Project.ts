@@ -40,6 +40,7 @@ export type TProject = {
  };
  author: number;
  featured_media: number;
+ featured_image: string;
  comment_status: string;
  ping_status: string;
  sticky: boolean;

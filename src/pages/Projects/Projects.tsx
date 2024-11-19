@@ -70,7 +70,7 @@ const Projects = () => {
     id: project.id,
     image: {
      alt: project.title.rendered,
-     src: project.fimg_url,
+     src: project.featured_image,
      title: project.title.rendered,
      width: "400",
      height: "400",
@@ -79,6 +79,8 @@ const Projects = () => {
     button: {
      label: "View Full",
      target: `${project.id}`,
+     scrollTo: "",
+     isExternal: false,
      ariaLabel: "project-content",
      ariaExpanded: false,
      ariaControls: `project-${project.id}`,
@@ -91,6 +93,7 @@ const Projects = () => {
  useEffect(() => {
   loadProjects();
   ScrollToTop();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
  }, []);
 
  return (
@@ -114,7 +117,7 @@ const Projects = () => {
      projectsMap
     ) : (
      <Headings title={"No projects available"} type={"h4"} />
-    )}{" "}
+    )}
    </Sections>
   </Main>
  );
