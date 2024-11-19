@@ -60,6 +60,7 @@ export const Navbar = styled(RowEnd("nav"))<{ isOpen: boolean }>`
   right: 0;
   left: 0;
   z-index: 999;
+  padding: ${({ theme }) => theme.spacing.medium};
  }
  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
   margin-top: ${({ theme }) => theme.spacing.medium};

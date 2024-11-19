@@ -17,15 +17,19 @@ export type TTheme = {
       verySmall: string;
       small: string;
       medium: string;
+      veryMedium: string; 
+      extraMedium: string;  
       large: string;
       veryLarge: string;
       extraLarge: string;
+      big: string;  
     };
     spacing: {
       extraSmall: string;
       verySmall: string;
       small: string;
       medium: string;
+      extraMedium: string;
       large: string;
       veryLarge: string;
       extraLarge: string;

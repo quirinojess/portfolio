@@ -19,7 +19,7 @@ function ProjectsCard({ content }: TCard) {
     height={image.height}
    />
    <Headings title={title} type={"h3"} />
-   <Button content={button} variant="secondary" paramType="project" />
+   <Button content={button} variant="secondary" paramType="'project'" />
   </S.ProjectsCard>
  );
 }

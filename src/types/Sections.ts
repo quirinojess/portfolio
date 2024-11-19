@@ -4,8 +4,9 @@ children: React.ReactNode;
 flex: TSectionsFlex;
 justify: TSectionsJustify;
 align: TSectionsAlign;
-id: string;
+id?: string;
 isVisible?: boolean;
+key?: number | string;
 }
    
 export type TSectionsFlex = 'row' | 'column';
