@@ -36,7 +36,7 @@ function Menu(content: TMenu) {
   <S.Container>
    <S.Hamburger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen}>
     {[...Array(3)].map((_, index) => (
-     <span key={`hamburger-line-${index}`} />
+     <span key={`hamburger-line-${index}-${Math.random()}`} />
     ))}
    </S.Hamburger>
    <S.Navbar data-testid={testId} isOpen={isOpen}>

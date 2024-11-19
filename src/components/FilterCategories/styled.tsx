@@ -2,12 +2,15 @@ import styled, { css } from "styled-components";
 
 export const Navbar = styled.div`
  position: absolute;
- top: 310px;
+ top: 350px;
  right: 15%;
  ${props => css`
   @media (max-width: ${props.theme.breakpoints.tablet}) {
-   top: 80vw;
-   right: auto;
+   position: fixed;
+   top: 50%;
+   left: -45%;
+   transform: rotate(90deg);
+   width: 100%;
   }
  `}
 `;

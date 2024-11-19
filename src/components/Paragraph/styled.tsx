@@ -10,7 +10,10 @@ export const Paragraph = styled.p<{ proportion: TParagraphProportions }>`
   @media (min-width: ${props.theme.breakpoints.large}) {
    font-size: ${props => props.theme.typography.extraMedium};
   }
-  @media (max-width: ${props.theme.breakpoints.mobile}) {
+  @media (max-width: ${props.theme.breakpoints.desktop}) {
+   width: ${props => props.theme.proportions.half};
+  }
+  @media (max-width: ${props.theme.breakpoints.tablet}) {
    width: ${props => props.theme.proportions.full};
   }
  `}
@@ -28,6 +31,7 @@ export const Tooltip = styled.div`
  transition: ${props => props.theme.transitions.short};
  transform: translate(50%, -300%);
  visibility: hidden;
+ ]pointer-events: none;
 `;
 
 export const StyledImageContainer = styled.div`

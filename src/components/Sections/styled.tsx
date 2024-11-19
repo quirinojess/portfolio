@@ -31,9 +31,10 @@ export const Sections = styled.section<{
   @media (max-width: ${props.theme.breakpoints.desktop}) {
    scroll-margin-top: ${props => props.theme.spacing.big};
   }
-  @media (max-width: ${props.theme.breakpoints.mobile}) {
+  @media (max-width: ${props.theme.breakpoints.tablet}) {
    align-items: flex-start;
    gap: ${props => props.theme.spacing.verySmall};
+   scroll-margin-top: ${props => props.theme.spacing.extraBig};
   }
  `}
 `;
