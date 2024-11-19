@@ -1,4 +1,5 @@
 import { TButtonContent } from "./Button";
+import { TFigure } from "./Figure";
 import { THeadingContent } from "./Heading";
 import { TListContent } from "./List";
 import { TParagraphContent } from "./Paragraph";
@@ -14,6 +15,5 @@ experience: TTimelineContent
 headingAbout: THeadingContent;
 descriptionAbout: TParagraphContent;
 headingRead: THeadingContent;
-descriptionRead: TParagraphContent;
-buttonRead: TButtonContent;
+readList: {id: string, img: TFigure, description: TParagraphContent; button: TButtonContent}[];
 }

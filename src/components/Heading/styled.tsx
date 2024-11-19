@@ -32,6 +32,9 @@ export const H1 = styled.h1`
    font-size: ${props => props.theme.typography.extraLarge};
    line-height: ${props => props.theme.spacing.veryBig};
   }
+  @media (min-width: ${props.theme.breakpoints.large}) {
+   font-size: ${props => props.theme.typography.big};
+  }
  `}
 `;
 
@@ -41,6 +44,11 @@ export const H2 = styled.h2`
  line-height: ${props => props.theme.typography.medium};
  font-weight: 700;
  margin: 0;
+ ${props => css`
+  @media (min-width: ${props.theme.breakpoints.large}) {
+   font-size: ${props => props.theme.typography.extraLarge};
+  }
+ `}
 `;
 
 export const H3 = styled.h3<{ activeH1: boolean }>`
@@ -58,6 +66,9 @@ export const H3 = styled.h3<{ activeH1: boolean }>`
     ? props.theme.typography.h1
     : props.theme.typography.h2};
    line-height: ${props => props.theme.spacing.extraLarge};
+  }
+  @media (min-width: ${props.theme.breakpoints.large}) {
+   font-size: ${props => props.theme.typography.extraLarge};
   }
  `}
 `;

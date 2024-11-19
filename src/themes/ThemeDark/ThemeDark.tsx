@@ -19,9 +19,11 @@ const ThemeDark: TTheme = {
   verySmall: "0.6em",
   small: "0.7em",
   medium: "1.1em",
+  extraMedium: "1.4em",
   large: "1.8em",
   veryLarge: "5em",
   extraLarge: "6em",
+  big: "8em",
  },
  spacing: {
   extraSmall: "6px",
@@ -56,7 +58,7 @@ const ThemeDark: TTheme = {
   mobile: "480px",
   tablet: "768px",
   desktop: "1024px",
-  large: "1200px",
+  large: "1900px",
  },
  shadows: {
   small: "0px 1px 3px rgba(0, 0, 0, 0.2)",

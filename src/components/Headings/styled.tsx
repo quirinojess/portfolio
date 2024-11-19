@@ -24,6 +24,10 @@ export const H2 = styled.h2`
   @media (max-width: ${props.theme.breakpoints.mobile}) {
    font-size: ${props => props.theme.typography.h4};
   }
+
+  @media (min-width: ${props.theme.breakpoints.large}) {
+   font-size: ${props => props.theme.typography.veryLarge};
+  }
  `}
 `;
 

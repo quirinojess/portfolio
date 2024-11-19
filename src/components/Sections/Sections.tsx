@@ -8,6 +8,7 @@ function Sections({
  align,
  id,
  isVisible,
+ key,
 }: TSections) {
  return (
   <S.Sections
@@ -16,7 +17,8 @@ function Sections({
    align={align}
    data-testid={id}
    id={id}
-   isVisible={isVisible}>
+   isVisible={isVisible}
+   key={key}>
    {children}
   </S.Sections>
  );

@@ -4,7 +4,7 @@ import { RowStart, ColumnCenter } from "themes/CommonAligns";
 export const TimelineContainer = styled(RowStart("div"))`
  width: ${props => props.theme.proportions.full};
  ${props => css`
-  @media (max-width: ${props.theme.breakpoints.mobile}) {
+  @media (max-width: ${props.theme.breakpoints.tablet}) {
    flex-direction: column;
   }
  `}
@@ -18,7 +18,7 @@ export const Circle = styled.div`
  position: absolute;
  top: ${props => props.theme.spacing.veryLarge};
  ${props => css`
-  @media (max-width: ${props.theme.breakpoints.mobile}) {
+  @media (max-width: ${props.theme.breakpoints.tablet}) {
    top: auto;
    left: ${props => props.theme.spacing.small};
   }
@@ -33,7 +33,7 @@ export const Period = styled.span`
  position: absolute;
  top: ${props => props.theme.spacing.medium};
  ${props => css`
-  @media (max-width: ${props.theme.breakpoints.mobile}) {
+  @media (max-width: ${props.theme.breakpoints.tablet}) {
    top: auto;
    left: -${props => props.theme.spacing.medium};
    writing-mode: vertical-rl;
@@ -69,7 +69,7 @@ export const TimelineItemContainer = styled(ColumnCenter("div"))`
   z-index: -1;
 
   ${props => css`
-   @media (max-width: ${props.theme.breakpoints.mobile}) {
+   @media (max-width: ${props.theme.breakpoints.tablet}) {
     top: 0;
     left: ${props.theme.spacing.medium};
     width: ${props.theme.strokes.thin}px;
@@ -78,7 +78,7 @@ export const TimelineItemContainer = styled(ColumnCenter("div"))`
   `}
  }
  ${props => css`
-  @media (max-width: ${props.theme.breakpoints.mobile}) {
+  @media (max-width: ${props.theme.breakpoints.tablet}) {
    margin-left: ${props.theme.spacing.medium};
   }
  `}
@@ -89,7 +89,7 @@ export const TimelineItem = styled(ColumnCenter("div"))`
  text-align: center;
  margin-top: ${props => props.theme.spacing.big};
  ${props => css`
-  @media (max-width: ${props.theme.breakpoints.mobile}) {
+  @media (max-width: ${props.theme.breakpoints.tablet}) {
    align-items: flex-start;
    margin-top: ${props => props.theme.spacing.medium};
    margin-left: ${props.theme.spacing.big};

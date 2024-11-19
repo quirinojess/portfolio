@@ -7,6 +7,9 @@ export const Paragraph = styled.p<{ proportion: TParagraphProportions }>`
  color: ${props => props.theme.colors.white};
  line-height: ${props => props.theme.spacing.large};
  ${props => css`
+  @media (min-width: ${props.theme.breakpoints.large}) {
+   font-size: ${props => props.theme.typography.extraMedium};
+  }
   @media (max-width: ${props.theme.breakpoints.mobile}) {
    width: ${props => props.theme.proportions.full};
   }

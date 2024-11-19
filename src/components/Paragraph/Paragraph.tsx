@@ -6,6 +6,8 @@ function Paragraph({ content, proportion, isPost }: TParagraph) {
  const { text, rendered } = content;
  const [elements, setElements] = useState<JSX.Element[]>([]);
 
+ const contentRender = isPost ? elements : text;
+
  useEffect(() => {
   const container = document.createElement("div");
   container.innerHTML = text || rendered || "";
@@ -62,9 +64,14 @@ function Paragraph({ content, proportion, isPost }: TParagraph) {
  }, [text, rendered]);
 
  return (
-  <S.Paragraph proportion={proportion}>
-   {isPost ? elements : content.text}
-  </S.Paragraph>
+  <>
+   {contentRender && (
+    <S.Paragraph
+     proportion={proportion}
+     dangerouslySetInnerHTML={{ __html: contentRender }}
+    />
+   )}
+  </>
  );
 }
 

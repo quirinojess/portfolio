@@ -24,8 +24,16 @@ export const Sections = styled.section<{
  margin-top: ${props => props.theme.spacing.veryBig};
  scroll-margin-top: ${props => props.theme.spacing.extraBig};
  ${props => css`
+  @media (min-width: ${props.theme.breakpoints.large}) {
+   margin-top: ${props.theme.spacing.extraBig};
+   scroll-margin-top: ${props.theme.spacing.extraBig};
+  }
+  @media (max-width: ${props.theme.breakpoints.desktop}) {
+   scroll-margin-top: ${props => props.theme.spacing.big};
+  }
   @media (max-width: ${props.theme.breakpoints.mobile}) {
    align-items: flex-start;
+   gap: ${props => props.theme.spacing.verySmall};
   }
  `}
 `;

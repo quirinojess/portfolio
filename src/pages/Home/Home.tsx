@@ -34,9 +34,28 @@ const Home = () => {
   headingAbout,
   descriptionAbout,
   headingRead,
-  descriptionRead,
-  buttonRead,
+  readList,
  } = HomeContent;
+
+ const readMap = readList.map(readItem => (
+  <Sections
+   key={readItem.id}
+   flex={"row"}
+   justify={"start"}
+   align={"center"}
+   id={`${testId}-read`}
+   isVisible={activeSection === `${testId}-read`}>
+   <Figure
+    alt={readItem.img.alt}
+    src={readItem.img.src}
+    title={readItem.img.title}
+    width={readItem.img.width}
+    height={readItem.img.height}
+   />
+   <Paragraph content={readItem.description} proportion={"half"} />
+   <Button content={readItem.button} />
+  </Sections>
+ ));
 
  return (
   <Main testId={testId}>
@@ -94,15 +113,7 @@ const Home = () => {
     id={`${testId}-read`}
     isVisible={activeSection === `${testId}-read`}>
     <Heading content={headingRead} />
-    <Figure
-     alt="Ebook cover with a girl"
-     src="assets/images/ebook-ia.png"
-     title="IA NO FRONT END - Potencialize seu desenvolvimento"
-     width="180px"
-     height="auto"
-    />
-    <Paragraph content={descriptionRead} proportion={"half"} />
-    <Button content={buttonRead} />
+    {readMap}
    </Sections>
   </Main>
  );
