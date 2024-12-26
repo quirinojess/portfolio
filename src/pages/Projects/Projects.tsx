@@ -108,7 +108,7 @@ const Projects = () => {
     <Heading content={headingProjects} activeH1 />
    </Sections>
    <Sections
-    flex="row"
+    flex="alternate"
     align="start"
     justify="space-between"
     id={`${testId}-projects`}
