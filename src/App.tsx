@@ -12,7 +12,7 @@ function App() {
   <ThemeProvider theme={ThemeDark}>
    <ScrollContextProvider>
     <ProjectContextProvider>
-     <BrowserRouter>
+     <BrowserRouter basename="/portfolio">
       <GlobalStyle />
       <ToastContainer />
       <Header />
