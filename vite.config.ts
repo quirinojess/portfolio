@@ -5,7 +5,7 @@ import { ghPages } from "vite-plugin-gh-pages";
 
 export default defineConfig({
  plugins: [react(), ghPages()],
- base: "",
+ base: "/",
  resolve: {
   alias: {
    components: path.resolve(__dirname, "src/components"),
