@@ -21,7 +21,7 @@
   "build": "vite build",
   "serve": "vite preview",
   "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
+  "deploy": "gh-pages -d dist",
   "test": "jest --coverage",
   "test:watch": "jest --watch",
   "eject": "react-scripts eject"
