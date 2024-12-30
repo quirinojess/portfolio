@@ -11,7 +11,7 @@ function Social({ content }: TSocial) {
    href={item.url}
    target="_blank"
    data-testid={item.name}>
-   <Icons type={`social-${item.name}`} size="18px" fill="white" />
+   <Icons type={`social-${item.name}`} size="16px" fill="white" />
   </S.SocialItem>
  ));
 

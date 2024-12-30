@@ -23,7 +23,7 @@ export const Logo = styled.button`
 `;
 
 export const Svg = styled.svg`
- width: ${props => props.theme.sizes.small};
+ width: ${props => props.theme.sizes.extraMedium};
  ${props => css`
   @media (max-width: ${props.theme.breakpoints.mobile}) {
    width: ${props.theme.sizes.mediumSmall};
