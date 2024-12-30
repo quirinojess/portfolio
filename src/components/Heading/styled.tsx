@@ -31,10 +31,18 @@ export const H1 = styled.h1`
  line-height: ${props => props.theme.typography.small};
  font-weight: 700;
  margin: 0;
+ margin-top: ${props => props.theme.spacing.veryBig};
  ${props => css`
+  @media (min-width: ${props.theme.breakpoints.large}) {
+   font-size: ${props => props.theme.typography.big};
+  }
+  @media (max-width: ${props.theme.breakpoints.tablet}) {
+   font-size: ${props => props.theme.typography.h1};
+  }
   @media (max-width: ${props.theme.breakpoints.mobile}) {
-   font-size: ${props => props.theme.typography.extraLarge};
+   font-size: ${props => props.theme.typography.veryLarge};
    line-height: ${props => props.theme.spacing.veryBig};
+   margin-top: ${props => props.theme.spacing.big};
   }
  `}
 `;
@@ -45,6 +53,14 @@ export const H2 = styled.h2`
  line-height: ${props => props.theme.typography.medium};
  font-weight: 700;
  margin: 0;
+ ${props => css`
+  @media (min-width: ${props.theme.breakpoints.large}) {
+   font-size: ${props => props.theme.typography.extraLarge};
+  }
+  @media (max-width: ${props.theme.breakpoints.mobile}) {
+   font-size: ${props => props.theme.typography.veryLarge};
+  }
+ `}
 `;
 
 export const H3 = styled.h3<{ activeH1: boolean }>`
@@ -57,6 +73,12 @@ export const H3 = styled.h3<{ activeH1: boolean }>`
  font-weight: 100;
  margin: 0;
  ${props => css`
+  @media (min-width: ${props.theme.breakpoints.large}) {
+   font-size: ${props => props.theme.typography.extraLarge};
+  }
+  @media (max-width: ${props.theme.breakpoints.tablet}) {
+   font-size: ${props => props.theme.typography.h2};
+  }
   @media (max-width: ${props.theme.breakpoints.mobile}) {
    font-size: ${props.activeH1
     ? props.theme.typography.h1

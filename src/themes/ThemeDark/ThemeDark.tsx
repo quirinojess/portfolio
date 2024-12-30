@@ -1,4 +1,6 @@
-const ThemeDark = {
+import { TTheme } from "types/Theme";
+
+const ThemeDark: TTheme = {
  colors: {
   transparency: "rgba(51, 51, 51, 0.7)",
   white: "#f9f9f9",
@@ -19,15 +21,19 @@ const ThemeDark = {
   verySmall: "0.6em",
   small: "0.8em",
   medium: "1.1em",
+  veryMedium: "1.4em",
+  extraMedium: "1.6em",
   large: "1.8em",
-  veryLarge: "5em",
+  veryLarge: "4em",
   extraLarge: "6em",
+  big: "8em",
  },
  spacing: {
   extraSmall: "4px",
   verySmall: "6px",
   small: "8px",
   medium: "16px",
+  extraMedium: "24px",
   large: "32px",
   veryLarge: "40px",
   extraLarge: "48px",
@@ -38,6 +44,7 @@ const ThemeDark = {
   center: "0 auto",
  },
  sizes: {
+  hiperSmall: "2px",
   extraSmall: "8px",
   verySmall: "16px",
   mediumSmall: "48px",
@@ -49,14 +56,14 @@ const ThemeDark = {
  proportions: {
   full: "100%",
   threeFourths: "70%",
-  half: "50%",
+  half: "45%",
   oneFourth: "25%",
  },
  breakpoints: {
   mobile: "480px",
   tablet: "768px",
   desktop: "1024px",
-  large: "1200px",
+  large: "1900px",
  },
  shadows: {
   small: "0px 1px 3px rgba(0, 0, 0, 0.2)",

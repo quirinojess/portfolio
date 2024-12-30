@@ -1,7 +1,7 @@
-import { IHeading } from "types/Heading";
+import { THeading } from "types/Heading";
 import * as S from "./styled";
 
-function Heading({ content, activeH1 = false }: IHeading) {
+function Heading({ content, activeH1 = false }: THeading) {
  const { title, subtitle } = content;
 
  return (

@@ -1,11 +1,12 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
+import { TButtonVariant } from "types/Button";
 
 const colorChange = keyframes`
   0% { border-color: var(--border-color-primary); }
   50% { border-color: var(--border-color-secondary); }
 `;
 
-export const Button = styled.button`
+export const Button = styled.button<{ variant: TButtonVariant }>`
  --border-color-primary: ${props => props.theme.colors.secondary};
  --border-color-secondary: ${props => props.theme.colors.primary};
  background: none;
@@ -14,7 +15,11 @@ export const Button = styled.button`
  font-size: ${props => props.theme.typography.medium};
  padding: ${props => props.theme.spacing.medium};
  color: ${props => props.theme.colors.white};
- border: 1px solid;
+ ${props =>
+  props.variant !== "secondary" &&
+  css`
+   border: 1px solid;
+  `}
  border-color: ${props => props.theme.colors.secondary};
  margin: 0 ${props => props.theme.spacing.small};
  outline: 0;
@@ -23,8 +28,11 @@ export const Button = styled.button`
  touch-action: manipulation;
  transition: ${props => props.theme.transitions.short};
  &:hover {
-  animation: ${colorChange} ${props => props.theme.transitions.medium} linear
-   infinite;
+  ${props =>
+   props.variant !== "secondary" &&
+   css`
+    animation: ${colorChange} ${props.theme.transitions.medium} linear infinite;
+   `}
   transform: scale(0.9);
  }
 `;

@@ -1,8 +1,8 @@
-import { IButton } from "types/Button";
+import { TButton } from "types/Button";
 import * as S from "./styled";
-import { useHandleClick } from "../../hooks";
+import { useHandleClick } from "hooks";
 
-function Button({ content }: IButton) {
+function Button({ content, variant = "primary", paramType }: TButton) {
  const {
   label,
   target,
@@ -10,18 +10,21 @@ function Button({ content }: IButton) {
   ariaExpanded,
   ariaLabel,
   type,
+  scrollTo,
   isExternal,
  } = content;
+
  const { handleClick } = useHandleClick();
 
  return (
   <S.Button
-   onClick={() => handleClick(target, isExternal)}
-   onKeyDown={() => handleClick(target, isExternal)}
+   onClick={() => handleClick(target, scrollTo, isExternal, paramType)}
+   onKeyDown={() => handleClick(target, scrollTo, isExternal, paramType)}
    type={type}
    aria-label={ariaLabel}
    aria-expanded={ariaExpanded}
-   aria-controls={ariaControls}>
+   aria-controls={ariaControls}
+   variant={variant}>
    {label}
   </S.Button>
  );

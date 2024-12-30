@@ -1,7 +1,7 @@
-import { IMarquee } from "types/Marquee";
+import { TMarquee } from "types/Marquee";
 import * as S from "./styled";
 
-function Marquee({ content }: IMarquee) {
+function Marquee({ content }: TMarquee) {
  const testId = "marquee";
 
  const itemsMap = content.map(item => (

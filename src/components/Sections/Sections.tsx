@@ -1,4 +1,4 @@
-import { ISections } from "types/Sections";
+import { TSections } from "types/Sections";
 import * as S from "./styled";
 
 function Sections({
@@ -8,7 +8,8 @@ function Sections({
  align,
  id,
  isVisible,
-}: ISections) {
+ key,
+}: TSections) {
  return (
   <S.Sections
    flex={flex}
@@ -16,7 +17,8 @@ function Sections({
    align={align}
    data-testid={id}
    id={id}
-   isVisible={isVisible}>
+   isVisible={isVisible}
+   key={key}>
    {children}
   </S.Sections>
  );

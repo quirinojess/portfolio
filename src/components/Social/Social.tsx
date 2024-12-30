@@ -1,8 +1,8 @@
-import { ISocial } from "types/Social";
+import { TSocial } from "types/Social";
 import * as S from "./styled";
 import { Icons } from "components";
 
-function Social({ content }: ISocial) {
+function Social({ content }: TSocial) {
  const testId = "social";
 
  const itensMap = content.map(item => (

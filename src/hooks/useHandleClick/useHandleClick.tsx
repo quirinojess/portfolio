@@ -1,24 +1,46 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useScroll } from "context/ScrollContext";
 
 function useHandleClick() {
  const navigate = useNavigate();
+ const location = useLocation();
+ const { setScrollTarget } = useScroll();
 
  function handleClick(
   route: string,
+  scrollTo?: string,
   isExternal?: boolean,
-  scrollTarget?: boolean
+  paramType?: string
  ) {
-  if (scrollTarget) {
-   const element = document.querySelector(`#${route}`);
-   if (element) {
-    element.scrollIntoView({ behavior: "smooth" });
+  if (paramType) {
+   const projectRoute = (() => {
+    switch (paramType) {
+     case "project":
+      return `/project/${route}`;
+     case "category":
+      return `/projects/${route}`;
+     default:
+      return "/";
+    }
+   })();
+
+   if (projectRoute && location.pathname !== projectRoute) {
+    navigate(projectRoute);
    }
-  } else {
-   if (isExternal) {
-    window.open(route, "_blank");
-   } else {
-    navigate(route);
-   }
+   return;
+  }
+
+  if (isExternal) {
+   window.open(route, "_blank");
+   return;
+  }
+
+  if (location.pathname !== route) {
+   navigate(route);
+  }
+
+  if (scrollTo) {
+   setScrollTarget(scrollTo);
   }
  }
 

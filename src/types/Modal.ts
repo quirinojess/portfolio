@@ -1,10 +1,10 @@
 
-export interface IModal{
+export type TModal ={
     setIsOpenModal:  React.Dispatch<React.SetStateAction<boolean>>;
     children: React.ReactNode;
 }
 
-export interface IModalContent{
+export type TModalContent ={
     imgLink?: string;
     imgAlt?: string;
     text?: string;

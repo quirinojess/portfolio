@@ -1,5 +1,5 @@
 
-export interface IStructuredData {
+export type TStructuredData = {
     name: string;
     description: string;
     url: string;

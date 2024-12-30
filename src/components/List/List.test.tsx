@@ -3,9 +3,14 @@ import { List } from "./List";
 import { ThemeDark } from "themes";
 import { ThemeProvider } from "styled-components";
 import { ReactNode } from "react";
+import ScrollProvider from "context/ScrollContext";
 
 const renderWithTheme = (component: ReactNode) => {
- return render(<ThemeProvider theme={ThemeDark}>{component}</ThemeProvider>);
+ return render(
+  <ThemeProvider theme={ThemeDark}>
+   <ScrollProvider>{component}</ScrollProvider>
+  </ThemeProvider>
+ );
 };
 
 test("renders list items correctly", () => {

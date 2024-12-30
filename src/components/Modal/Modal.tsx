@@ -1,8 +1,8 @@
-import { IModal } from "types/Modal";
+import { TModal } from "types/Modal";
 import * as S from "./styled";
 import { Icons } from "components";
 
-function Modal({ setIsOpenModal, children }: IModal) {
+function Modal({ setIsOpenModal, children }: TModal) {
  return (
   <S.Modal
    onClick={() => setIsOpenModal(false)}

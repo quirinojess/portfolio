@@ -3,11 +3,11 @@ import { ThemeDark } from "../../themes";
 import { useHandleClick } from "hooks";
 
 function Logo() {
- const testId = "logotype";
+ const testId = "logo";
  const { handleClick } = useHandleClick();
 
  return (
-  <S.Logo onClick={() => handleClick("home-projects", false, true)}>
+  <S.Logo onClick={() => handleClick("/", "home-projects", false)}>
    <S.Svg
     data-testid={testId}
     version="1.1"

@@ -1,7 +1,7 @@
-import { IIcons } from "types/Icons";
+import { TIcons } from "types/Icons";
 import * as S from "./styled";
 
-function Icons({ type, color, fill, stroke, size }: IIcons) {
+function Icons({ type, color, fill, stroke, size }: TIcons) {
  switch (type) {
   case "social-codepen":
    return (

@@ -1,23 +1,49 @@
-import { IMenu, IMenuItem } from "types/Menu";
+import { useEffect, useState } from "react";
+import { TMenu, TMenuItem } from "types/Menu";
 import * as S from "./styled";
-import { useHandleClick } from "../../hooks";
+import { useHandleClick } from "hooks";
+import { useScroll } from "context/ScrollContext";
 
-function Menu(content: IMenu) {
+function Menu(content: TMenu) {
+ const [isOpen, setIsOpen] = useState(false);
+ const { handleClick } = useHandleClick();
+ const { scrollTarget } = useScroll();
+
  const testId = "menu";
 
- const { handleClick } = useHandleClick();
+ useEffect(() => {
+  if (scrollTarget) {
+   const element = document.getElementById(scrollTarget);
+   if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+   }
+  }
+ }, [scrollTarget]);
 
- const navbarMap = content.content.map((item: IMenuItem) => {
-  return (
-   <S.NavItem
-    key={item.id}
-    onClick={() => handleClick(item.path, false, item.scrollTarget)}
-    onKeyDown={() => handleClick(item.path, false, item.scrollTarget)}>
-    {item.label}
-   </S.NavItem>
-  );
- });
+ const navbarMap = content.content.map((item: TMenuItem) => (
+  <S.NavItem
+   key={item.id}
+   onClick={() => {
+    handleClick(item.path, item.scroll, false);
+    setIsOpen(false);
+   }}
+   onKeyDown={() => handleClick(item.path, item.scroll, false)}>
+   {item.label}
+  </S.NavItem>
+ ));
 
- return <S.Navbar data-testid={testId}>{navbarMap}</S.Navbar>;
+ return (
+  <S.Container>
+   <S.Hamburger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen}>
+    {[...Array(3)].map((_, index) => (
+     <span key={`hamburger-line-${index}-${Math.random()}`} />
+    ))}
+   </S.Hamburger>
+   <S.Navbar data-testid={testId} isOpen={isOpen}>
+    {navbarMap}
+   </S.Navbar>
+  </S.Container>
+ );
 }
+
 export { Menu };

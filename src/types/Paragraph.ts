@@ -1,12 +1,16 @@
-
-export interface IParagraph{
-content: IParagraphContent;
-proportion: IParagraphProportions ;
+export type TParagraph = {
+ content: TParagraphContent;
+ proportion: TParagraphProportions;
+ isPost?: boolean;
 }
-   
-export type IParagraphProportions = 'full' | 'threeFourths' | 'half' | 'oneFourth';
-     
-export interface IParagraphContent{
-text: string;  
- }
-         
+
+export type TParagraphProportions =
+ | "full"
+ | "threeFourths"
+ | "half"
+ | "oneFourth";
+
+export type TParagraphContent = {
+ text?: string;
+ rendered?: string;
+}
