@@ -1,10 +1,11 @@
 import { defineConfig } from "vite";
 import path from "path";
 import react from "@vitejs/plugin-react";
+import { ghPages } from "vite-plugin-gh-pages";
 
 export default defineConfig({
- plugins: [react()],
- base: "",
+ plugins: [react(), ghPages()],
+ base: "/portfolio/",
  resolve: {
   alias: {
    components: path.resolve(__dirname, "src/components"),

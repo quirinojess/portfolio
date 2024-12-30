@@ -12,7 +12,7 @@ function App() {
   <ThemeProvider theme={ThemeDark}>
    <ScrollContextProvider>
     <ProjectContextProvider>
-     <BrowserRouter>
+     <BrowserRouter basename={import.meta.env.BASE_URL}>
       <GlobalStyle />
       <ToastContainer />
       <Header />
