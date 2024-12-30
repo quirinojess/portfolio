@@ -85,6 +85,13 @@ const HomeContent: THome = {
    link: "assets/certificates/seo.png",
    linkDescription: "View Certificate",
   },
+  {
+    id: "11",
+    title: "Post Graduate in FullStack Development",
+    description: "DESCOMPLICA",
+    link: "assets/certificates/descomplica-full.png",
+    linkDescription: "View Certificate",
+   },
  ],
  experience: [
   {

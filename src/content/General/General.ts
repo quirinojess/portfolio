@@ -59,8 +59,10 @@ const GeneralContent: TGeneral = {
   { id: "24", text: "ADOBE CC", isHighlighted: true },
   { id: "25", text: "UX/UI", isHighlighted: true },
   { id: "26", text: "Azure" },
-  { id: "27", text: "API REST" },
-  { id: "28", text: "Bootstrap" },
+  { id: "27", text: "AWS" },
+  { id: "28", text: "API REST" },
+  { id: "29", text: "Bootstrap" },
+  { id: "30", text: "JAVA" },
  ],
  social: [
   { id: "1", name: "github", url: "https://github.com/quirinojess" },

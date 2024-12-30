@@ -6,6 +6,19 @@ export const Paragraph = styled.p<{ proportion: TParagraphProportions }>`
  font-size: ${props => props.theme.typography.p};
  color: ${props => props.theme.colors.white};
  line-height: ${props => props.theme.spacing.large};
+ video {
+  max-width: ${props => props.theme.proportions.full};
+  height: auto;
+ }
+ blockquote {
+  border-top: ${props => props.theme.borders.thin};
+  border-bottom: ${props => props.theme.borders.thin};
+  border-color: ${props => props.theme.colors.primary};
+  padding: ${props => props.theme.spacing.small};
+ }
+ @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+  padding: ${props => props.theme.spacing.small};
+ }
  ${props => css`
   @media (min-width: ${props.theme.breakpoints.large}) {
    font-size: ${props => props.theme.typography.extraMedium};
@@ -46,10 +59,4 @@ export const StyledImage = styled.img`
  max-width: ${props => props.theme.proportions.full};
  height: auto;
  border-radius: ${props => props.theme.borderRadius.small};
-`;
-
-export const Project = styled.div`
- border: 1px solid ${props => props.theme.colors.secondary};
- margin: ${props => props.theme.spacing.medium} 0;
- padding: ${props => props.theme.spacing.medium};
 `;

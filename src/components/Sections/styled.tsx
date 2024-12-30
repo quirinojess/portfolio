@@ -23,6 +23,18 @@ export const Sections = styled.section<{
  transition: opacity ${props => props.theme.transitions.short};
  margin-top: ${props => props.theme.spacing.veryBig};
  scroll-margin-top: ${props => props.theme.spacing.extraBig};
+ ${props =>
+  props.flex === "alternate" &&
+  css`
+   @media (min-width: ${props.theme.breakpoints.mobile}) {
+    > div:nth-child(4n + 3) {
+     order: 2;
+    }
+    > div:nth-child(4n + 4) {
+     order: 1;
+    }
+   }
+  `}
  ${props => css`
   @media (min-width: ${props.theme.breakpoints.large}) {
    margin-top: ${props.theme.spacing.extraBig};
